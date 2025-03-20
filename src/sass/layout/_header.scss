@@ -1,0 +1,77 @@
+// Mixins para reutilização
+@mixin flex($justify: center, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+  .nav {
+    @include flex(space-between, center);
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .logo {
+      .logo-link {
+        @include flex(center, center, 1rem);
+        text-decoration: none;
+        height: 100%;
+        width: 100%;
+
+        svg {
+          height: 100%;
+          width: 20%;
+          object-fit: cover;
+        }
+
+        span {
+          font-family: "Nunito Sans", sans-serif;
+          font-size: 2rem;
+          color: #2a5c82;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .nav-links {
+      @include flex(center, center, 4rem);
+      list-style: none;
+
+      .nav-link {
+        text-decoration: none;
+        color: #333333;
+        font-size: 1.6rem;
+        transition: all 0.3s ease;
+        position: relative;
+
+        &:hover {
+          color: #5ba4e6;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: #5ba4e6;
+          transition: width 0.3s ease;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

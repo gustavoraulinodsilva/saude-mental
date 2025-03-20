@@ -1,16 +1,12 @@
-//Abstracts
-@import "./abstracts/variables";
-@import "./abstracts/mixins";
-
 //Base
-@import "./base/global";
-@import "./base/reset";
+@use "./base/global";
+@use "./base/reset";
 
 //Components
 
 //Layout
-@import "./layout/header";
-@import "./layout/footer";
+@use "./layout/header";
+@use "./layout/footer";
 
 //Pages
-@import "./pages/home";
+@use "./pages/home";
