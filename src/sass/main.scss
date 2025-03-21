@@ -1,12 +1,14 @@
 //Base
-@use "./base/global";
 @use "./base/reset";
+@use "./base/variables" as *;
+@use "./base/mixins";
+@use "./base/global";
 
 //Components
 
 //Layout
-@use "./layout/header";
-@use "./layout/footer";
+@use "layout/header";
+@use "layout/footer";
 
 //Pages
-@use "./pages/home";
+@use "pages/home";
