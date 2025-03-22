@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../sass/layout/_header.scss";
 
 const Header: React.FC = () => {
@@ -20,7 +21,7 @@ const Header: React.FC = () => {
                 </a>
             </div>
             <ul className="nav-links">
-                <li><a href="pages/health-mental.html" className="nav-link">Saúde Mental</a></li>
+                <li><Link to="/saude-mental" className="nav-link">Saúde Mental</Link></li>
                 <li><a href="#estilo-vida" className="nav-link">Estilo de Vida</a></li>
                 <li><a href="#avaliacao" className="nav-link">Avaliação</a></li>
             </ul>
