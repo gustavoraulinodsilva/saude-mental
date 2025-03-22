@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <div className="home">
       <section className="hero">
         <div className="hero-banner">
-          <img src="../assets/images/SafeSpace-Saude-Mental-no-Trabalho-Porque-Precisamos-Falar-Sobre-02.png" alt="" />
+          <img src="/src/assets/images/SafeSpace-Saude-Mental-no-Trabalho-Porque-Precisamos-Falar-Sobre-02.png" alt="" />
           <div className="banner-overlay"></div>
         </div>
         <div className="hero-content container">

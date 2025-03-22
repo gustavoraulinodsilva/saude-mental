@@ -1,0 +1,96 @@
+@use "../base/variables" as vars;
+
+.home{
+    position: relative;
+
+    .hero{
+        position: relative;
+        min-height: 80vh;
+        overflow: hidden;
+
+        .hero-banner{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: vars.$primary-color;
+
+            .banner-image{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .banner-overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(42, 92, 130, 0.7), rgba(0, 0, 0, 0.5));
+                mix-blend-mode: multiply;
+            }
+        }
+
+        .hero-content{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 2;
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+
+            .hero-title{
+                font-size: 4.5rem;
+                margin-bottom: 2rem;
+                line-height: 1.2;
+            }
+
+            .hero-text{
+                font-size: 2rem;
+                margin-bottom: 4rem;
+            }
+
+            .cta-button{
+                display: inline-block;
+                padding: 1.5rem 3rem;
+                background: vars.$accent-color;
+                color: vars.$neutral-dark;
+                text-decoration: none;
+                border-radius: 30px;
+                font-size: 1.8rem;
+                transition: transform 0.3s ease;
+
+                &:hover{
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    .about-section{
+        position: relative;
+        padding: 10rem;
+
+        .section-title{
+            text-align: center;
+            font-size: 3.5rem;
+            margin-bottom: 5rem;
+            color: vars.$primary-color;
+        }
+
+        .about-grid{
+            text-align: center;
+
+            .about-text{
+                font-size: 1.8rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}
