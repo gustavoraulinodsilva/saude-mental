@@ -1,5 +1,6 @@
 import React from "react";
 import '../sass/pages/_health-mental.scss'
+import { Link } from "react-router-dom";
 
 const HealthMental: React.FC = () => {
     return(
@@ -69,7 +70,7 @@ const HealthMental: React.FC = () => {
                                         <li>Distúrbios do sono</li>
                                     </ul>
                                 </div>
-                                <a href="#" className="card-link">Saiba mais →</a>
+                                <Link to="/depressao" className="card-link">Saiba mais →</Link>
                             </article>
                             <article className="disorder-card">
                                 <div className="card-header">
@@ -83,7 +84,7 @@ const HealthMental: React.FC = () => {
                                         <li>Distúrbios do sono</li>
                                     </ul>
                                 </div>
-                                <a href="#" className="card-link">Saiba mais →</a>
+                                <Link to="/depressao" className="card-link">Saiba mais →</Link>
                             </article>
                             <article className="disorder-card">
                                 <div className="card-header">
@@ -97,7 +98,7 @@ const HealthMental: React.FC = () => {
                                         <li>Distúrbios do sono</li>
                                     </ul>
                                 </div>
-                                <a href="#" className="card-link">Saiba mais →</a>
+                                <Link to="/depressao" className="card-link">Saiba mais →</Link>
                             </article>
                             <article className="disorder-card">
                                 <div className="card-header">
@@ -111,7 +112,7 @@ const HealthMental: React.FC = () => {
                                         <li>Distúrbios do sono</li>
                                     </ul>
                                 </div>
-                                <a href="#" className="card-link">Saiba mais →</a>
+                                <Link to="/depressao" className="card-link">Saiba mais →</Link>
                             </article>
                             <article className="disorder-card">
                                 <div className="card-header">
@@ -125,7 +126,7 @@ const HealthMental: React.FC = () => {
                                         <li>Distúrbios do sono</li>
                                     </ul>
                                 </div>
-                                <a href="#" className="card-link">Saiba mais →</a>
+                                <Link to="/depressao" className="card-link">Saiba mais →</Link>
                             </article>
                             <article className="disorder-card">
                                 <div className="card-header">
@@ -139,7 +140,7 @@ const HealthMental: React.FC = () => {
                                         <li>Distúrbios do sono</li>
                                     </ul>
                                 </div>
-                                <a href="#" className="card-link">Saiba mais →</a>
+                                <Link to="/depressao" className="card-link">Saiba mais →</Link>
                             </article>
                         </div>
                     </section>
