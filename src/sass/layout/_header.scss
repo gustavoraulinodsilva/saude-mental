@@ -1,20 +1,19 @@
 @use "../base/variables" as vars;
 
 .header {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 0;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 1000;
+  height: 7rem;
+  padding: 0 8rem;
+  z-index: 99999;
 
   .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    height: 100%;
 
     .logo {
       .logo-link {
@@ -28,14 +27,14 @@
 
         svg {
           height: 100%;
-          width: 20%;
+          width: 15%;
           object-fit: cover;
         }
 
         span {
           font-family: "Nunito Sans", sans-serif;
           font-size: 2rem;
-          color: vars.$primary-color;
+          color: vars.$white-color;
           font-weight: 700;
         }
       }
@@ -50,13 +49,13 @@
 
       .nav-link {
         text-decoration: none;
-        color: #333333;
+        color: vars.$white-color;
         font-size: 1.6rem;
         transition: all 0.3s ease;
         position: relative;
 
         &:hover {
-          color: #5ba4e6;
+          color: vars.$secondary-color;
         }
 
         &::after {
@@ -66,7 +65,7 @@
           left: 0;
           width: 0;
           height: 2px;
-          background: #5ba4e6;
+          background: vars.$secondary-color;
           transition: width 0.3s ease;
         }
 
