@@ -1,0 +1,130 @@
+@use "../base/variables" as vars;
+@use "sass:color";
+
+.evaluation-container {
+    position: relative;
+    min-height: 70vh;
+
+    .evaluation-hero{
+        position: relative;
+        min-height: 60vh;
+        background: linear-gradient(135deg, vars.$secondary-color, vars.$primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 8rem 0 4rem;
+        text-align: center;
+
+        .evaluation-title{
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .evaluation-description{
+            font-size: 1.5rem;
+        }
+    }
+
+    .consent-box {
+        background: vars.$neutral-light;
+        border-radius: 15px;
+        padding: 3rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        margin: 2rem auto;
+
+        .consent-title {
+            color: vars.$primary-color;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .consent-content {
+            p {
+                font-size: 1.6rem;
+                margin-bottom: 1.5rem;
+                color: vars.$neutral-dark;
+            }
+
+            ul {
+                list-style: none;
+                padding: 2rem 0;
+                text-align: left;
+                max-width: 600px;
+                margin: 0 auto;
+
+                li {
+                    padding: 1rem;
+                    margin: 0.5rem 0;
+                    background: rgba(vars.$primary-color, 0.1);
+                    border-radius: 8px;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .consent-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+
+            button {
+                padding: 1.2rem 3rem;
+                border: none;
+                border-radius: 30px;
+                font-size: 1.6rem;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &.agree-button {
+                    background: vars.$accent-color;
+                    color: vars.$neutral-dark;
+
+                    &:hover {
+                        background: color.adjust(vars.$accent-color, $lightness: -10%);
+                        transform: translateY(-2px);
+                    }
+                }
+
+                &.disagree-button {
+                    background: vars.$secondary-color;
+                    color: white;
+
+                    &:hover {
+                        background: color.adjust(vars.$secondary-color, $lightness: -10%);
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+
+    .ms-forms {
+        width: 100%;
+        height: 800px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        margin: 2rem 0;
+    }
+
+    .thank-you-message {
+        text-align: center;
+        padding: 4rem;
+        background: vars.$neutral-light;
+        border-radius: 15px;
+
+        h2 {
+            color: vars.$primary-color;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: vars.$neutral-dark;
+        }
+    }
+}

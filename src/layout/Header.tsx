@@ -23,7 +23,7 @@ const Header: React.FC = () => {
             <ul className="nav-links">
                 <li><Link to="/saude-mental" className="nav-link">Saúde Mental</Link></li>
                 <li><Link to="/estilo-de-vida" className="nav-link">Estilo de Vida</Link></li>
-                <li><a href="#avaliacao" className="nav-link">Avaliação</a></li>
+                <li><Link to="/avaliacao" className="nav-link">Avaliação</Link></li>
             </ul>
         </nav>
     </header>
