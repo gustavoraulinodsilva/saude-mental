@@ -28,9 +28,9 @@ const Footer: React.FC = () => {
                     <div className="link-group">
                         <h4>Navegação</h4>
                         <ul>
-                            <li><a href="#">Saúde Mental</a></li>
-                            <li><a href="#">Alimentação</a></li>
-                            <li><a href="#">Atividades Físicas</a></li>
+                            <li><Link to={'/saude-mental'}>Saúde Mental</Link></li>
+                            <li><a href="#alimentacao">Alimentação</a></li>
+                            <li><a href="#atividades">Atividades Físicas</a></li>
                         </ul>
                     </div>
                     
