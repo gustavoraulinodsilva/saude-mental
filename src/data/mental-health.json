@@ -1,0 +1,36 @@
+{
+    "hero": {
+        "image": "/src/assets/images/SafeSpace-Saude-Mental-no-Trabalho-Porque-Precisamos-Falar-Sobre-02.png",
+        "hero-title": "Saúde Mental: Compreensão e Cuidados",
+        "hero-subtitle": "Promovendo o bem-estar psicológico e emocional"
+    },
+    "section": {
+        "title": "O que é Saúde Mental?",
+        "content": "A saúde mental refere-se ao nosso bem-estar emocional, psicológico e social. Ela afeta como pensamos, sentimos e agimos em diferentes situações da vida...",
+        "importance": [
+            "Influencia relações pessoais e profissionais",
+            "Impacta na produtividade e qualidade de vida",
+            "Fundamental para lidar com estresse"
+        ],
+        "statistics": [
+            {
+                "percentage": "23%",
+                "description": "da população brasileira sofre de ansiedade"
+            },
+            {
+                "percentage": "5,8%",
+                "description": "tem diagnóstico de depressão"
+            },
+            {
+                "percentage": "5,8%",
+                "description": "tem diagnóstico de depressão"
+            },
+            {
+                "percentage": "5,8%",
+                "description": "tem diagnóstico de depressão"
+            }
+        ],
+        "disorder-title": "Transtornos Mentais Comuns",
+        "discorder-desc": "Conheça os principais quadros psicológicos e seus impactos:"
+    }
+}

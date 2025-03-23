@@ -2,7 +2,7 @@ import React from "react";
 import '../sass/pages/_health-mental.scss'
 import { Link } from "react-router-dom";
 
-const HealthMental: React.FC = () => {
+const MentalHealth: React.FC = () => {
     return(
         <section className="mental-health-page">
             <div className="mental-health-hero">
@@ -150,4 +150,4 @@ const HealthMental: React.FC = () => {
     );
 };
 
-export default HealthMental;
+export default MentalHealth;
