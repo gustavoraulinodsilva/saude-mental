@@ -1,0 +1,19 @@
+{
+    "hero": {
+        "image": "./src/assets/images/SafeSpace-Saude-Mental-no-Trabalho-Porque-Precisamos-Falar-Sobre-02.png",
+        "title": "Cuidando da Mente, Transformando Vidas",
+        "desc": "Informações confiáveis e recursos para seu bem-estar emocional",
+        "cta": {
+            "label": "Saiba mais",
+            "link": "#sobre-projeto"
+        }
+    },
+    "about": {
+        "title": "Sobre o projeto",
+        "text": [
+          "Desenvolvido por estudantes de engenharia e relações internacionais em parceria com a Faculdade FSG, este projeto visa democratizar o acesso à informação qualificada sobre saúde mental.",
+          "Nosso objetivo é oferecer um espaço seguro onde as pessoas possam aprender sobre bem-estar emocional e encontrar recursos confiáveis.",
+          "Acreditamos que a informação é o primeiro passo para promover a saúde mental e transformar vidas."
+        ]
+    } 
+}
