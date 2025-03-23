@@ -1,0 +1,147 @@
+@use "../base/variables" as vars;
+
+.lifestyle-page{
+    position: relative;
+
+    .lifestyle-hero {
+        position: relative;
+        min-height: 60vh;
+        background: linear-gradient(135deg, vars.$secondary-color, vars.$primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 8rem 0 4rem;
+        text-align: center;
+
+        .container{
+
+            h1{
+                font-size: 4rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .lifestyle-content {
+        max-width: 70%;
+        margin: 0 auto;
+        padding: 5rem 2rem;
+
+        .nutrition-section {
+            margin-bottom: 6rem;
+
+            .nutrition-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 3rem;
+                margin-top: 4rem;
+
+                .nutrition-card {
+                    background: vars.$neutral-light;
+                    padding: 2.5rem;
+                    border-radius: 15px;
+                    text-align: center;
+                    transition: transform 0.3s ease;
+
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+
+                    .nutrition-icon {
+                        font-size: 4rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    .nutrition-list{
+                        list-style: none;
+                        text-align: left;
+                        margin-top: 1.5rem;
+
+                        li{
+                            padding: 0.8rem 0;
+                            border-bottom: 1px solid #eee;
+
+                            &::before{
+                                content: "✓";
+                                color: vars.$sucess-color;
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+
+                    .avoid-list{
+                        list-style: none;
+                        text-align: left;
+                        margin-top: 1.5rem;
+
+                        li{
+                            padding: 0.8rem 0;
+                            border-bottom: 1px solid #eee;
+
+                            &::before{
+                                content: "⚠️";
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .activities-section {
+        margin: 6rem 0;
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+
+            .activity-card {
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+
+                .activity-icon {
+                    font-size: 3.5rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+    .benefits-section {
+        background: vars.$neutral-light;
+        padding: 4rem;
+        border-radius: 15px;
+        margin: 4rem 0;
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+
+            .benefit-card {
+                text-align: center;
+                padding: 2rem;
+
+                h3{
+                    color: vars.$primary-color;
+                    font-size: 3.5rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+}
