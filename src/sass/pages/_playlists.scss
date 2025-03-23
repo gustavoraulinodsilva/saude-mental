@@ -14,7 +14,7 @@
 
             .page-title {
                 font-size: 3.5rem;
-                color: vars.$primary-color;
+                color: vars.$accent-color;
                 text-align: center;
                 margin-bottom: 1.5rem;
             }
@@ -57,6 +57,7 @@
 
         .playlist-category {
             margin-bottom: 6rem;
+            padding: 3rem;
 
             .category-title {
                 font-size: 2.8rem;
