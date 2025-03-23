@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import HealthMental from './pages/HealthMental'
 import MentalDisorderDetail from './pages/MentalDisorderDetail'
 import LifeStyle from './pages/LifeStyle'
+import Playlists from './pages/Playlists'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/saude-mental' element={<HealthMental/>} />
           <Route path='/depressao' element={<MentalDisorderDetail/>} />
           <Route path='/estilo-de-vida' element={<LifeStyle/>} />
+          <Route path='/playlists' element={<Playlists/>}/>
         </Routes>
       </main>
       <Footer/>

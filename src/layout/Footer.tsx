@@ -1,5 +1,6 @@
 import React from "react";
 import "../sass/layout/_footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
     return(
@@ -36,7 +37,7 @@ const Footer: React.FC = () => {
                     <div className="link-group">
                         <h4>Recursos</h4>
                         <ul>
-                            <li><a href="#">Playlists</a></li>
+                            <li><Link to={'/playlists'}>Playlists</Link></li>
                             <li><a href="#">Profissionais</a></li>
                             <li><a href="#">Ajuda Imediata</a></li>
                         </ul>

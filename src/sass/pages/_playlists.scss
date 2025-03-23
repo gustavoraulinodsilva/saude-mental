@@ -1,0 +1,107 @@
+@use "../base/variables" as vars;
+
+.playlists-container{
+    position: relative;
+    background: vars.$neutral-light;
+    min-height: 100vh;
+
+    .container{
+
+        .text-container{
+            padding: 12rem 0 4rem;
+            background-color: vars.$neutral-dark;
+
+
+            .page-title {
+                font-size: 3.5rem;
+                color: vars.$primary-color;
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            
+            .page-subtitle {
+                font-size: 1.8rem;
+                color: vars.$neutral-light;
+                text-align: center;
+                margin-bottom: 4rem;
+                opacity: 0.9;
+            }
+    
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1.6rem;
+                color: vars.$neutral-light;
+                text-decoration: none;
+                margin-bottom: 3rem;
+                padding: 1rem 4rem;
+                border-radius: 0.8rem;
+                transition: all 0.3s ease;
+    
+                svg{
+                    width: 24px;
+                    height: 24px;
+
+                    path{
+                        fill: vars.$neutral-light;
+                    }
+                }
+    
+                &:hover{
+                    background: rgba(42, 92, 130, 0.5);
+                    transform: translateX(-5px);
+                }
+            }
+        }
+
+        .playlist-category {
+            margin-bottom: 6rem;
+
+            .category-title {
+                font-size: 2.8rem;
+                color: vars.$primary-color;
+                margin-bottom: 3rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid vars.$accent-color;
+            }
+
+            .playlists-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 3rem;
+
+                .playlist-card {
+                    background: white;
+                    border-radius: 1.5rem;
+                    overflow: hidden;
+                    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+                    transition: transform 0.3s ease;
+
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+
+                    iframe{
+                        border: none;
+                        width: 100%;
+                    }
+
+                    h3{
+                        font-size: 1.8rem;
+                        color: vars.$neutral-dark;
+                        padding: 1.5rem 2rem 0;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    p{
+                        font-size: 1.4rem;
+                        color: #666;
+                        padding: 0 2rem 2rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+    }
+}
