@@ -1,62 +1,91 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../sass/pages/_health-mental.scss'
 import { Link } from "react-router-dom";
 
+//Interfaces
+interface HeroData{
+    image: string,
+    heroTitle: string,
+    heroSubtitle: string
+}
+
+interface Statistic{
+    percentage: string,
+    description: string
+}
+
+interface SectionData{
+    title: string,
+    content: string,
+    importanceTitle: string,
+    importance: [],
+    statisticTitle: string,
+    statistics: Statistic[],
+    disorderTitle: string,
+    disorderDesc: string
+}
+
+interface MentalHealthData{
+    hero: HeroData,
+    section: SectionData
+}
+
 const MentalHealth: React.FC = () => {
+    const [data, setData] = useState<MentalHealthData | null>(null);
+
+    useEffect(() => {
+        fetch('./src/data/mental-health.json')
+        .then(response => response.json())
+        .then(setData)
+        .catch(error => console.error("Erro ao carregar os dados", error));
+    }, []);
+
+    if(!data){
+        return <p>Carregando...</p>;
+    }
+
     return(
         <section className="mental-health-page">
             <div className="mental-health-hero">
                 <div className="hero-banner">
-                    <img src="/src/assets/images/SafeSpace-Saude-Mental-no-Trabalho-Porque-Precisamos-Falar-Sobre-02.png" alt="" />
+                    <img src={data.hero.image} alt="banner" />
                     <div className="banner-overlay"></div>
                 </div>
                 <div className="container hero-content">
-                    <h1>Saúde Mental: Compreensão e Cuidados</h1>
-                    <p className="hero-subtitle">Promovendo o bem-estar psicológico e emocional</p>
+                    <h1>{data.hero.heroTitle}</h1>
+                    <p className="hero-subtitle">{data.hero.heroSubtitle}</p>
                 </div>
             </div>
             <main className="mental-health-content container">
                 <section className="mental-health-detail">
                     <article className="health-article">
-                        <h2>O que é Saúde Mental?</h2>
-                        <p>A saúde mental refere-se ao nosso bem-estar emocional, psicológico e social. Ela afeta como pensamos, sentimos e agimos em diferentes situações da vida...</p>
+                        <h2>{data.section.title}</h2>
+                        <p>{data.section.content}</p>
                         <div className="article-grid">
                             <div className="importance-box">
-                                <h3>Por que é importante?</h3>
+                                <h3>{data.section.importanceTitle}</h3>
                                 <ul className="importance-list">
-                                    <li>Influencia relações pessoais e profissionais</li>
-                                    <li>Impacta na produtividade e qualidade de vida</li>
-                                    <li>Fundamental para lidar com estresse</li>
-                                    <li>Fundamental para lidar com estresse</li>
-                                    <li>Fundamental para lidar com estresse</li>
+                                    {data.section.importance.map((item, index) => (
+                                        <li key={index}>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                             <div className="statistics-box">
-                                <h3>Dados Relevantes</h3>
+                                <h3>{data.section.statisticTitle}</h3>
                                 <div className="stats-grid">
-                                    <div className="stat-item">
-                                        <div className="stat-number">23%</div>
-                                        <div className="stat-desc">da população brasileira sofre de ansiedade</div>
-                                    </div>
-                                    <div className="stat-item">
-                                        <div className="stat-number">5,8%</div>
-                                        <div className="stat-desc">tem diagnóstico de depressão</div>
-                                    </div>
-                                    <div className="stat-item">
-                                        <div className="stat-number">5,8%</div>
-                                        <div className="stat-desc">tem diagnóstico de depressão</div>
-                                    </div>
-                                    <div className="stat-item">
-                                        <div className="stat-number">5,8%</div>
-                                        <div className="stat-desc">tem diagnóstico de depressão</div>
-                                    </div>
+                                    {data.section.statistics.map((stat,index) => (
+                                        <div key={index} className="stat-item">
+                                            <div className="stat-number">{stat.percentage}</div>
+                                            <div className="stat-desc">{stat.description}</div>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
                     </article>
                     <section className="disorders-section">
-                        <h2>Transtornos Mentais Comuns</h2>
-                        <p className="section-intro">Conheça os principais quadros psicológicos e seus impactos:</p>
+                        <h2>{data.section.disorderTitle}</h2>
+                        <p className="section-intro">{data.section.disorderDesc}</p>
                         <div className="disorders-grid">
                             <article className="disorder-card">
                                 <div className="card-header">
