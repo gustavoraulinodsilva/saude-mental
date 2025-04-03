@@ -4,7 +4,15 @@
 @use "./base/mixins";
 @use "./base/global";
 
+// Swiper (Importação dos estilos)
+@use "swiper/scss";
+@use "swiper/scss/navigation";
+@use "swiper/scss/pagination";
+@use "swiper/scss/effect-creative";
+@use "swiper/scss/effect-fade";
+
 //Components
+@use "components/home-about-carousel";
 
 //Layout
 @use "layout/header";
@@ -12,3 +20,8 @@
 
 //Pages
 @use "pages/home";
+@use "pages/health-mental";
+@use "pages/disorder-mental-detail";
+@use "pages/life-style";
+@use "pages/evaluation";
+@use "pages/playlists";

@@ -84,13 +84,8 @@
             color: vars.$primary-color;
         }
 
-        .about-grid{
-            text-align: center;
-
-            .about-text{
-                font-size: 1.8rem;
-                line-height: 1.8;
-            }
+        .about-carousel{
+            position: relative;
         }
     }
 }
