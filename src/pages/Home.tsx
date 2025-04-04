@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import "../sass/pages/_home.scss";
-import HomeAboutCarousel from "../components/HomeAboutCarousel";
+import HomeAboutCarousel, { SlideData } from "../components/HomeAboutCarousel";
 
 //Interfaces
 interface HeroData{
@@ -15,7 +15,7 @@ interface HeroData{
 
 interface AboutData{
   title: string;
-  text: string[]; 
+  slides: SlideData[];
 }
 
 interface HomeContent{
@@ -74,16 +74,8 @@ const Home: React.FC = () => {
         </div>
       </section>
       <section id="sobre-projeto" className="about-section container">
-        <h2 className="section-title">{content?.about.title}</h2>
-        {/* <div className="about-grid">
-          <div className="about-text">
-            {content?.about.text.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-        </div> */}
         <div className="about-carousel">
-          <HomeAboutCarousel />
+          <HomeAboutCarousel slides={content?.about.slides || []}/>
         </div>
       </section>
     </div>

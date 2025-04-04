@@ -3,7 +3,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel,Pagination } from "swiper/modules";
 import '../sass/components/_home-about-carousel.scss';
 
-const HomeAboutCarousel: React.FC = () => {
+export interface SlideData{
+    title: string;
+    content: string;
+    cta?: {
+        label: string;
+        link: string;
+    }
+}
+
+interface Props{
+    slides: SlideData[];
+}
+
+const HomeAboutCarousel: React.FC<Props> = ({slides}) => {
     return (
         <div className="home-about-carousel">
             <Swiper
@@ -15,21 +28,21 @@ const HomeAboutCarousel: React.FC = () => {
                 pagination={{ clickable: true }}
                 className="swiper"
             >
-                <SwiperSlide>
-                    <div className="swiper-slide">
-                        <h3>Slide 1</h3>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-slide">
-                        <h3>Slide 2</h3>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="swiper-slide">
-                        <h3>Slide 3</h3>
-                    </div>
-                </SwiperSlide>
+                {slides?.map((slide, index) => (
+                    <SwiperSlide key={index} className="swiper-slide">
+                        <div className="swiper-content">
+                            <h3 className="slide-title">{slide.title}</h3>
+                            <p className="slide-text">{slide.content}</p>
+                            {slide.cta && (
+                                <div className="slide-footer">
+                                    <a href={slide.cta.link} className="cta-button">
+                                    {slide.cta.label}
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

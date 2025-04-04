@@ -1,34 +1,107 @@
-// HomeAboutCarousel.module.scss
+@use "../base/variables" as vars;
 
 .home-about-carousel {
-  width: 100%;
-  height: 400px;
+  height: 600px;
+  background: rgba(vars.$neutral-light, 0.15);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(vars.$primary-color, 0.1);
+  border: 1px solid rgba(vars.$secondary-color, 0.1);
 
   .swiper {
     height: 100%;
-  }
+    padding: 2rem;
+    position: relative;
 
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: #f0f0f0; // Cor de fundo dos slides (opcional)
-    border-radius: 8px; // Borda arredondada nos slides (opcional)
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra nos slides (opcional)
+    .swiper-slide {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-    h3 {
-      font-size: 1.5rem;
-      color: #333; // Cor do texto
+      .swiper-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        text-align: center;
+        position: relative;
+
+        .slide-title {
+          font-size: 2.8rem;
+          color: vars.$primary-color;
+          margin-bottom: 2rem;
+          font-weight: 600;
+          letter-spacing: -0.5px;
+        }
+
+        .slide-text {
+          font-size: 1.3rem;
+          line-height: 1.8;
+          color: vars.$neutral-dark;
+          margin-bottom: 3rem;
+          padding: 0 2rem;
+        }
+
+        .slide-footer {
+          margin-top: 3rem;
+
+          .cta-button {
+            background: linear-gradient(
+              to right,
+              vars.$secondary-color,
+              vars.$success-color // Usando success-color como gradiente
+            );
+            color: vars.$white-color;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            text-decoration: none;
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(vars.$secondary-color, 0.3);
+            }
+          }
+        }
+      }
     }
   }
 
-  // Estilização da navegação (botões de seta)
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #000; // Cor dos botões de navegação
-    &:hover {
-      color: #007bff; // Cor ao passar o mouse
+  .swiper-pagination-bullet {
+    background: vars.$primary-color;
+    opacity: 0.3;
+    width: 12px;
+    height: 12px;
+    transition: all 0.3s ease;
+
+    &-active {
+      opacity: 1;
+      background: vars.$secondary-color;
+      transform: scale(1.2);
+    }
+  }
+}
+// Melhorias adicionais:
+@media (max-width: 768px) {
+  .home-about-carousel {
+    height: 500px;
+
+    .swiper-content {
+      padding: 2rem 1rem;
+    }
+
+    .slide-title {
+      font-size: 2rem;
+    }
+
+    .slide-text {
+      font-size: 1.1rem;
     }
   }
 }

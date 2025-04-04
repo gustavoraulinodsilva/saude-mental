@@ -9,11 +9,23 @@
         }
     },
     "about": {
-        "title": "Sobre o projeto",
-        "text": [
-          "Desenvolvido por estudantes de engenharia e relações internacionais em parceria com a Faculdade FSG, este projeto visa democratizar o acesso à informação qualificada sobre saúde mental.",
-          "Nosso objetivo é oferecer um espaço seguro onde as pessoas possam aprender sobre bem-estar emocional e encontrar recursos confiáveis.",
-          "Acreditamos que a informação é o primeiro passo para promover a saúde mental e transformar vidas."
+        "slides": [
+            {
+                "title": "Sobre o projeto",
+                "content": "Desenvolvido por estudantes de engenharia e relações internacionais em parceria com a Faculdade FSG..."
+            },
+            {
+                "title": "Como foi pensado",
+                "content": "Este projeto visa democratizar o acesso à informação qualificada sobre saúde mental..."
+            },
+            {
+                "title": "Benefícios",
+                "content": "Acreditamos que a informação é o primeiro passo para promover a saúde mental e transformar vidas.",
+                "cta": {
+                    "label": "Acessar Recursos",
+                    "link": "/saude-mental"
+                }
+            }
         ]
-    } 
+    }
 }
