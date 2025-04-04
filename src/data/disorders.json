@@ -1,0 +1,82 @@
+{
+    "disorders": [
+        {
+            "id": 1,
+            "title": "Ansiedade Generalizada",
+            "description": "Caracterizado por preocupação excessiva e persistente que interfere nas atividades diárias.",
+            "symptoms": [
+                "Inquietação constante",
+                "Fadiga frequente",
+                "Dificuldade de concentração",
+                "Tensão muscular",
+                "Distúrbios do sono"
+            ],
+            "link": "/ansiedade"
+        },
+        {
+            "id": 2,
+            "title": "Depressão Maior",
+            "description": "Transtorno de humor caracterizado por sentimentos persistentes de tristeza e perda de interesse.",
+            "symptoms": [
+                "Humor deprimido",
+                "Perda de prazer",
+                "Alterações de peso",
+                "Fadiga extrema",
+                "Pensamentos suicidas"
+            ],
+            "link": "/depressao"
+        },
+        {
+            "id": 3,
+            "title": "Transtorno Bipolar",
+            "description": "Condição mental com variações extremas de humor entre mania e depressão.",
+            "symptoms": [
+                "Episódios maníacos",
+                "Humor eufórico",
+                "Grandiosidade",
+                "Aceleração do pensamento",
+                "Comportamentos de risco"
+            ],
+            "link": "/bipolar"
+        },
+        {
+            "id": 4,
+            "title": "Transtorno Obsessivo-Compulsivo",
+            "description": "Padrão de pensamentos indesejados (obsessões) e comportamentos repetitivos (compulsões).",
+            "symptoms": [
+                "Pensamentos intrusivos",
+                "Rituais repetitivos",
+                "Medo de contaminação",
+                "Verificação constante",
+                "Necessidade de simetria"
+            ],
+            "link": "/toc"
+        },
+        {
+            "id": 5,
+            "title": "Estresse Pós-Traumático",
+            "description": "Distúrbio de ansiedade desencadeado por evento traumático vivenciado ou testemunhado.",
+            "symptoms": [
+                "Revivência do trauma",
+                "Pesadelos frequentes",
+                "Hipervigilância",
+                "Evitação de gatilhos",
+                "Embotamento emocional"
+            ],
+            "link": "/tept"
+        },
+        {
+            "id": 6,
+            "title": "Transtorno Alimentar",
+            "description": "Padrões alimentares prejudiciais que afetam a saúde física e mental.",
+            "symptoms": [
+                "Preocupação extrema com peso",
+                "Dietas restritivas",
+                "Compulsão alimentar",
+                "Distorção da imagem corporal",
+                "Uso de laxantes"
+            ],
+            "link": "/alimentar"
+        }
+    ]
+}

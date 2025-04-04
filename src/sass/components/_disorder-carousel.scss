@@ -1,0 +1,129 @@
+@use "../base/variables" as vars;
+
+.disorder-carousel {
+    padding: 0 4rem 4rem;
+
+    .swiper-slide {
+      height: auto;
+      display: flex;
+    }
+
+    .disorder-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      margin: 0 1rem;
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-header {
+        background: vars.$primary-color;
+        color: white;
+        padding: 1.5rem;
+
+        h3 {
+          margin: 0;
+          font-size: 1.6rem;
+        }
+      }
+
+      .card-content {
+        padding: 2rem;
+        flex-grow: 1;
+
+        p {
+          font-size: 1.4rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .symptoms-list {
+          list-style: none;
+          padding-left: 1.5rem;
+          margin: 1rem 0;
+
+          li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            font-size: 1.2rem;
+
+            &::before {
+              content: "•";
+              color: vars.$secondary-color;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .card-link {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        background: #f8f9fa;
+        color: vars.$primary-color;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: vars.$primary-color;
+          color: white;
+        }
+      }
+    }
+
+    // Navigation
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: vars.$primary-color;
+      background: rgba(vars.$neutral-light, 0.8);
+      padding: 1.5rem;
+      border-radius: 50%;
+      backdrop-filter: blur(4px);
+      width: 40px;
+      height: 40px;
+
+      &::after {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+
+    // Pagination
+    .swiper-pagination-bullet {
+      background: vars.$neutral-dark;
+      opacity: 0.3;
+      width: 12px;
+      height: 12px;
+
+      &-active {
+        background: vars.$primary-color;
+        opacity: 1;
+      }
+    }
+  }
+
+@media (max-width: 768px) {
+    .disorder-carousel {
+      padding: 0 2rem 3rem;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+    }
+
+    .section-description {
+      font-size: 1.6rem;
+    }
+  }

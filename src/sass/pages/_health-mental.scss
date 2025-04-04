@@ -163,67 +163,35 @@
                     color: vars.$neutral-dark;
                 }
 
-                .disorders-grid{
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-                    gap: 4rem;
-                    padding: 0 2rem;
-
-                    .disorder-card{
-                        background: white;
-                        border-radius: 12px;
-                        overflow: hidden;
-                        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-                        transition: transform 0.3s ease;
-                        max-width: 400px;
-                        margin: 0 auto;
-
-                        &:hover{
-                            transform: translateY(-5px);
-                        }
-
-                        .card-header{
-                            background: vars.$primary-color;
-                            color: white;
-                            padding: 1.5rem;
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                        }
-
-                        .card-content {
-                            padding: 2rem;
-
-                            .symptoms-list {
-                                margin: 1rem 0;
-                                padding-left: 1.5rem;
-                                list-style: none;
-
-                                li{
-                                    margin-bottom: 0.5rem;
-                                    position: relative;
-
-                                    &::before{
-                                        content: '•';
-                                        color: vars.$secondary-color;
-                                        margin-right: 0.5rem;
-                                    }
-                                }
-                            }
-                        }
-
-                        .card-link {
-                            display: block;
-                            padding: 1rem;
-                            text-align: center;
-                            background: #f8f9fa;
-                            color: vars.$primary-color;
-                            text-decoration: none;
-                            font-weight: 600;
-                        }
-                    }
+                .disorders-carousel{
+                    padding: 5rem 0;
                 }
             }
+        }
+    }
+}
+
+@media(max-width: 901px){
+    .disorders-carousel-section {
+        padding: 4rem 0;
+        width: 100%;
+      
+        .section-title {
+          text-align: center;
+          font-size: 2.8rem;
+          margin-bottom: 1.5rem;
+          color: vars.$primary-color;
+        }
+      
+        .section-description {
+          text-align: center;
+          margin-bottom: 4rem;
+          font-size: 1.8rem;
+          color: vars.$neutral-dark;
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 0 2rem;
         }
     }
 }
