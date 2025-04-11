@@ -1,17 +1,32 @@
 import React from "react";
 import '../sass/pages/_mental-disorder-detail.scss';
+import { CiDesktopMouse2 } from "react-icons/ci";
 
 const MentalDisorderDetail: React.FC = () => {
     return(
         <section className="disorder-detail-page">
             <div className="disorder-hero">
+                <div className="banner">
+                    <img src="/src/assets/images/ansiedade-scaled.jpg" alt="anciedade" />
+                </div>
                 <div className="container">
                     <h1 className="disorder-title">Depressão</h1>
-                    <p className="disorder-subtitle">Compreendendo os sintomas, causas e tratamentos</p>
+                    <div className="disorder-content">
+                        <h3 className="title">Você sabia?</h3>
+                        <p className="desc">
+                            A depressão é um transtorno mental caracterizado por uma tristeza profunda e persistente, perda de interesse nas atividades diárias e alterações no funcionamento físico e emocional. 
+                            É uma condição séria que pode afetar a qualidade de vida e até levar ao suicídio se não for tratado especificamente.
+                        </p>
+                    </div>  
+                </div>
+                <div className="move-section">
+                    <a href="#next-section" className="move-btn" aria-label="Role para baixo">
+                        <CiDesktopMouse2 size={32} />
+                    </a>
                 </div>
             </div>
             <main className="disorder-content container">
-                <section className="overview-section">
+                {/* <section className="overview-section">
                     <div className="content-grid">
                         <article className="key-info">
                             <h2>Visão Geral</h2>
@@ -31,12 +46,8 @@ const MentalDisorderDetail: React.FC = () => {
                             </div>
                             <p className="description">A depressão é um transtorno mental complexo com causas multifatoriais, incluindo aspectos biológicos, psicológicos e ambientais. Caracteriza-se por alterações persistentes no humor e comportamento, podendo comprometer significativamente a qualidade de vida.</p>
                         </article>
-
-                        <div className="main-image">
-                            <img src="/src/assets/images/ansiedade-scaled.jpg" alt="anciedade" />
-                        </div>
                     </div>
-                </section>
+                </section> */}
                 <section className="symptoms-section">
                     <h2>Sintomas Principais</h2>
                     <div className="symptoms-grid">

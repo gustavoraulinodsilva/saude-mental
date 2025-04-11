@@ -5,27 +5,114 @@
 
     .disorder-hero {
         position: relative;
-        min-height: 60vh;
-        background: linear-gradient(135deg, vars.$primary-color 0%, #1a4465 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        padding: 8rem 0 4rem;
+        min-height: 100vh;
+
+        .banner{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: 85% center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-65%, -50%) scale(1.4);
+                transition: all 0.3s ease;
+            }
+            
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
 
         .container {
+            position: absolute;
+            z-index: 2;
+            top: 50%;
+            left: 70%;
+            transform: translate(0%, -50%);
+            color: #fff;
+
             .disorder-title {
                 font-size: 4.5rem;
                 text-align: center;
                 margin-bottom: 1.5rem;
             }
 
-            .disorder-subtitle {
-                font-size: 2rem;
-                text-align: center;
-                font-weight: 300;
+            .disorder-content{
+                background: #2b3744;
+                padding: 2rem 3rem;
+                border-radius: 2rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+                .title{
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+
+                .desc{
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                    text-align: center;
+                }
             }
         }
+
+        .move-section{
+            display: flex;
+            animation: upanddown 2s ease-in-out infinite;
+            margin-top: 30px;
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            .move-btn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                transition: background-color 0.3s ease;
+
+                svg{
+                    color: #fff;
+                }
+            }
+        }
+
+        @keyframes upanddown {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }        
     }
 
     .disorder-content {
