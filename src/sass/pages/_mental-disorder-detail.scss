@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../base/variables" as vars;
 
 .disorder-detail-page {
@@ -318,7 +319,7 @@
     
     &:hover {
       transform: scale(1.1) rotate(360deg);
-      background: darken(vars.$primary-color, 10%);
+      background: color.adjust(vars.$primary-color, $lightness: -10%); 
     }
   
     // Esconder quando chegar no final da main
