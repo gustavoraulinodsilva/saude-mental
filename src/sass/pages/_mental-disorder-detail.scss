@@ -1,324 +1,339 @@
 @use "../base/variables" as vars;
 
 .disorder-detail-page {
+  position: relative;
+
+  .disorder-hero {
     position: relative;
+    min-height: 100vh;
 
-    .disorder-hero {
-        position: relative;
-        min-height: 100vh;
+    .banner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
 
-        .banner{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 85% center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-65%, -50%) scale(1.4);
+        transition: all 0.3s ease;
+      }
 
-            img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: 85% center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-65%, -50%) scale(1.4);
-                transition: all 0.3s ease;
-            }
-            
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                z-index: 1;
-                background: rgba(0, 0, 0, 0.5);
-            }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .container {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 70%;
+      transform: translate(0%, -50%);
+      color: #fff;
+
+      .disorder-title {
+        font-size: 4.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .disorder-content {
+        background: #2b3744;
+        padding: 2rem 3rem;
+        border-radius: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+        .title {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          text-align: center;
         }
 
-        .container {
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            left: 70%;
-            transform: translate(0%, -50%);
-            color: #fff;
-
-            .disorder-title {
-                font-size: 4.5rem;
-                text-align: center;
-                margin-bottom: 1.5rem;
-            }
-
-            .disorder-content{
-                background: #2b3744;
-                padding: 2rem 3rem;
-                border-radius: 2rem;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-
-                .title{
-                    font-size: 2.5rem;
-                    margin-bottom: 1rem;
-                    text-align: center;
-                }
-
-                .desc{
-                    font-size: 1.6rem;
-                    line-height: 1.6;
-                    text-align: center;
-                }
-            }
+        .desc {
+          font-size: 1.6rem;
+          line-height: 1.6;
+          text-align: center;
         }
+      }
+    }
 
-        .move-section{
-            display: flex;
-            animation: upanddown 2s ease-in-out infinite;
-            margin-top: 30px;
-            position: absolute;
-            z-index: 2;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 5vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    .move-section {
+      display: flex;
+      animation: upanddown 2s ease-in-out infinite;
+      margin-top: 30px;
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .move-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transition: background-color 0.3s ease;
+
+        svg {
+          color: #fff;
+        }
+      }
+    }
+
+    @keyframes upanddown {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  }
+
+  .disorder-content {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+
+    .overview-section {
+      .content-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 6rem;
+
+        .key-info {
+          background: vars.$neutral-light;
+          padding: 3rem;
+          border-radius: 15px;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+          .info-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 2rem;
+            margin: 2rem 0;
 
-            .move-btn{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid #fff;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                transition: background-color 0.3s ease;
+            .info-item {
+              text-align: center;
+              padding: 1.5rem;
+              background: white;
+              border-radius: 10px;
 
-                svg{
-                    color: #fff;
-                }
-            }
-        }
+              .info-label {
+                display: block;
+                color: vars.$secondary-color;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+              }
 
-        @keyframes upanddown {
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }        
-    }
-
-    .disorder-content {
-        max-width: 70%;
-        margin: 0 auto;
-        padding: 5rem 2rem;
-
-            .overview-section {
-            .content-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 4rem;
-                margin-bottom: 6rem;
-
-                .key-info {
-                background: vars.$neutral-light;
-                padding: 3rem;
-                border-radius: 15px;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-
-                .info-box {
-                    display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                    gap: 2rem;
-                    margin: 2rem 0;
-
-                    .info-item {
-                    text-align: center;
-                    padding: 1.5rem;
-                    background: white;
-                    border-radius: 10px;
-
-                    .info-label {
-                        display: block;
-                        color: vars.$secondary-color;
-                        font-weight: 600;
-                        margin-bottom: 0.5rem;
-                    }
-
-                    .info-value {
-                        font-size: 1.8rem;
-                        color: vars.$primary-color;
-                    }
-                    }
-                }
-                }
-
-                .main-image img {
-                width: 100%;
-                border-radius: 15px;
-                height: 400px;
-                object-fit: cover;
-                }
-            }
-            }
-
-            .symptoms-section {
-            margin: 6rem 0;
-
-            .symptoms-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 3rem;
-                margin-top: 4rem;
-
-                .symptom-card {
-                background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                text-align: center;
-                transition: transform 0.3s ease;
-
-                &:hover {
-                    transform: translateY(-5px);
-                }
-
-                .symptom-icon {
-                    font-size: 3rem;
-                    margin-bottom: 1rem;
-                }
-                }
-            }
-            }
-
-            .treatment-section {
-            background: vars.$neutral-light;
-            padding: 4rem;
-            border-radius: 15px;
-            margin: 4rem 0;
-
-            .treatment-timeline {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 3rem;
-                margin-top: 3rem;
-
-                .treatment-step {
-                text-align: center;
-                padding: 2rem;
-                position: relative;
-
-                .step-number {
-                    width: 40px;
-                    height: 40px;
-                    background: vars.$accent-color;
-                    color: vars.$neutral-dark;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin: 0 auto 1rem;
-                    font-weight: 700;
-                }
-                }
-            }
-            }
-
-            .benefits-section {
-            margin: 6rem 0;
-
-            h2 {
-                text-align: center;
-                font-size: 3.2rem;
+              .info-value {
+                font-size: 1.8rem;
                 color: vars.$primary-color;
-                margin-bottom: 4rem;
+              }
             }
-
-            .benefits-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-                gap: 3rem;
-                margin-top: 2rem;
-
-                .benefit-card {
-                    background: white;
-                    padding: 2.5rem;
-                    border-radius: 15px;
-                    text-align: center;
-                    transition: all 0.3s ease;
-                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-
-                    &:hover {
-                        transform: translateY(-5px);
-                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-                    }
-
-                    .benefit-icon {
-                        font-size: 4rem;
-                        margin-bottom: 1.5rem;
-                        display: block;
-                        transition: transform 0.3s ease;
-                    }
-
-                    h3 {
-                        color: vars.$secondary-color;
-                        font-size: 2rem;
-                        margin-bottom: 1rem;
-                    }
-
-                    p {
-                        font-size: 1.6rem;
-                        line-height: 1.5;
-                        color: vars.$neutral-dark;
-                    }
-                }
-            }
+          }
+          .description{
+            font-size: 1.4rem;
+            line-height: 1.5;
+            color: vars.$neutral-dark;
+            margin-top: 2rem;
+            text-align: center;
+          }
         }
 
-            .help-card {
-                background: vars.$primary-color;
-                color: white;
-                padding: 3rem;
-                border-radius: 15px;
-                text-align: center;
-                margin: 4rem auto;
-                max-width: 600px;
-
-                .emergency-contacts {
-                    list-style: none;
-                    margin: 2rem 0;
-
-                    li {
-                    font-size: 1.8rem;
-                    margin: 1.5rem 0;
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    justify-content: center;
-                    }
-                }
-
-                .cta-button {
-                    background: vars.$accent-color;
-                    color: vars.$neutral-dark;
-                    padding: 1.5rem 4rem;
-                    border: none;
-                    border-radius: 30px;
-                    font-size: 1.6rem;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                    transform: scale(1.05);
-                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                    }
-                }
-            }
+        .main-image img {
+          width: 100%;
+          border-radius: 15px;
+          height: 400px;
+          object-fit: cover;
+        }
+      }
     }
+
+    .symptoms-section {
+      margin: 6rem 0;
+
+      .symptoms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-top: 4rem;
+
+        .symptom-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 15px;
+          text-align: center;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+          }
+
+          .symptom-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+
+    .treatment-section {
+      background: vars.$neutral-light;
+      padding: 4rem;
+      border-radius: 15px;
+      margin: 4rem 0;
+
+      .treatment-timeline {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin-top: 3rem;
+
+        .treatment-step {
+          text-align: center;
+          padding: 2rem;
+          position: relative;
+
+          .step-number {
+            width: 40px;
+            height: 40px;
+            background: vars.$accent-color;
+            color: vars.$neutral-dark;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .benefits-section {
+      margin: 6rem 0;
+
+      h2 {
+        text-align: center;
+        font-size: 3.2rem;
+        color: vars.$primary-color;
+        margin-bottom: 4rem;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+        margin-top: 2rem;
+
+        .benefit-card {
+          background: white;
+          padding: 2.5rem;
+          border-radius: 15px;
+          text-align: center;
+          transition: all 0.3s ease;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+          &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+          }
+
+          .benefit-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            transition: transform 0.3s ease;
+          }
+
+          h3 {
+            color: vars.$secondary-color;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            color: vars.$neutral-dark;
+          }
+        }
+      }
+
+      .additional-info {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 2rem;
+        font-weight: bold;
+        color: vars.$primary-color;
+      }
+    }
+
+    .help-card {
+      background: vars.$primary-color;
+      color: white;
+      padding: 3rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 4rem auto;
+      max-width: 600px;
+
+      .emergency-contacts {
+        list-style: none;
+        margin: 2rem 0;
+
+        li {
+          font-size: 1.8rem;
+          margin: 1.5rem 0;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          justify-content: center;
+        }
+      }
+
+      .cta-button {
+        background: vars.$accent-color;
+        color: vars.$neutral-dark;
+        padding: 1.5rem 4rem;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
 }
