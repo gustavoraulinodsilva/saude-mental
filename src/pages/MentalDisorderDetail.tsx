@@ -1,5 +1,5 @@
 import React from "react";
-import '../sass/pages/_disorder-mental-detail.scss';
+import '../sass/pages/_mental-disorder-detail.scss';
 
 const MentalDisorderDetail: React.FC = () => {
     return(
