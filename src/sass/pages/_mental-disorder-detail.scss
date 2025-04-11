@@ -295,45 +295,45 @@
         color: vars.$primary-color;
       }
     }
-
-    .help-card {
-      background: vars.$primary-color;
-      color: white;
-      padding: 3rem;
-      border-radius: 15px;
-      text-align: center;
-      margin: 4rem auto;
-      max-width: 600px;
-
-      .emergency-contacts {
-        list-style: none;
-        margin: 2rem 0;
-
-        li {
-          font-size: 1.8rem;
-          margin: 1.5rem 0;
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          justify-content: center;
-        }
-      }
-
-      .cta-button {
-        background: vars.$accent-color;
-        color: vars.$neutral-dark;
-        padding: 1.5rem 4rem;
-        border: none;
-        border-radius: 30px;
-        font-size: 1.6rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-          transform: scale(1.05);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+  }
+  // Remova o .help-card existente e adicione:
+.floating-help-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: vars.$primary-color;
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      transform: scale(1.1) rotate(360deg);
+      background: darken(vars.$primary-color, 10%);
+    }
+  
+    // Esconder quando chegar no final da main
+    @media (min-width: 992px) {
+      &.bottom-locked {
+        position: absolute;
+        top: auto;
+        bottom: 30px;
+        right: 30px;
       }
     }
+  }
+  
+  // Adicione esta regura no final do arquivo
+  .disorder-content {
+    position: relative; // Para o posicionamento absoluto do botão
   }
 }

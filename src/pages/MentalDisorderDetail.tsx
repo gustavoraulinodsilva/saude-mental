@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import '../sass/pages/_mental-disorder-detail.scss';
 import { CiDesktopMouse2 } from "react-icons/ci";
 
 const MentalDisorderDetail: React.FC = () => {
+
+    const [isBottom, setIsBottom] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        const mainElement = document.querySelector('.disorder-content') as HTMLElement;
+        if (!mainElement) return;
+  
+        const mainRect = mainElement.getBoundingClientRect();
+        const button = document.querySelector('.floating-help-button') as HTMLElement;
+        
+        if (button) {
+          const shouldLock = window.innerHeight + window.scrollY >= document.body.offsetHeight - 100;
+          setIsBottom(shouldLock);
+          
+          if (shouldLock) {
+            button.style.position = 'absolute';
+            button.style.top = `${mainRect.bottom - window.scrollY - 100}px`;
+          } else {
+            button.style.position = 'fixed';
+            button.style.top = 'auto';
+          }
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return(
         <section className="disorder-detail-page">
             <div className="disorder-hero">
@@ -136,16 +165,9 @@ const MentalDisorderDetail: React.FC = () => {
                     </div>
                     <p className="additional-info">*Atividades leves como caminhadas e ioga já apresentam benefícios significativos quando praticadas regularmente</p>
                 </section>
-
-                <aside className="help-card">
-                    <h3>Precisa de Ajuda Imediata?</h3>
-                    <ul className="emergency-contacts">
-                        <li>📞 CVV - 188 (24h)</li>
-                        <li>🏥 CAPS mais próximo</li>
-                        <li>👨⚕ Psiquiatra especializado</li>
-                    </ul>
-                    <button className="cta-button">Buscar Ajuda Profissional</button>
-                </aside>
+                <button className="floating-help-button" onClick={() => document.getElementById('emergency')?.scrollIntoView({ behavior: 'smooth' })} aria-label="Ajuda rápida">
+                    🆘
+                </button>
             </main>
         </section>
     );
