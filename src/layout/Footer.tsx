@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer: React.FC = () => {
     return(
         <footer className="footer">
-            <div className="footer-alert">
+            <div className="footer-alert" id="emergency">
                 <div className="container">
                     <div className="resource-box footer-resource">
                         <h3>Busque Ajuda Imediata</h3>

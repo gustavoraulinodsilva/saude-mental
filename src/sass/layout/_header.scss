@@ -8,6 +8,9 @@
   height: 7rem;
   padding: 0 8rem;
   z-index: 99999;
+  background: rgba(94,110,132,0.4);
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(2rem);
 
   .nav {
     display: flex;
