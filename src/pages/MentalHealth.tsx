@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import '../sass/pages/_health-mental.scss'
+import '../sass/pages/_mental-health.scss'
 import DisorderCarousel from "../components/DisorderCarousel";
 import { MentalHealthData } from "../types/mentalHealthTypes";
 import disordersData from '../data/disorders.json';
