@@ -297,41 +297,6 @@
       }
     }
   }
-  // Remova o .help-card existente e adicione:
-.floating-help-button {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: vars.$primary-color;
-    color: white;
-    border: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    &:hover {
-      transform: scale(1.1) rotate(360deg);
-      background: color.adjust(vars.$primary-color, $lightness: -10%); 
-    }
-  
-    // Esconder quando chegar no final da main
-    @media (min-width: 992px) {
-      &.bottom-locked {
-        position: absolute;
-        top: auto;
-        bottom: 30px;
-        right: 30px;
-      }
-    }
-  }
   
   // Adicione esta regura no final do arquivo
   .disorder-content {
