@@ -33,8 +33,37 @@
         margin: 0 auto;
         padding: 5rem 2rem;
 
+        // Novas classes para texto introdutório
+        .section-intro {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        // Novas classes para títulos de subseções
+        .subsection-title {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: vars.$neutral-dark;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
         .nutrition-section {
             margin-bottom: 6rem;
+
+            // Nova classe para citações sobre nutrição
+            .nutrition-quote {
+                margin: 2rem 0;
+                padding: 1rem 2rem;
+                border-left: 4px solid vars.$success-color;
+                background-color: rgba(76, 175, 80, 0.1);
+                font-style: italic;
+                line-height: 1.6;
+                font-size: 1.05rem;
+                color: #444;
+            }
 
             .nutrition-grid {
                 display: grid;
@@ -42,55 +71,84 @@
                 gap: 3rem;
                 margin-top: 4rem;
 
+                // Seu código existente para nutrition-card
                 .nutrition-card {
-                    background: vars.$neutral-light;
-                    padding: 2.5rem;
-                    border-radius: 15px;
-                    text-align: center;
-                    transition: transform 0.3s ease;
-
-                    &:hover{
-                        transform: translateY(-5px);
-                    }
-
-                    .nutrition-icon {
-                        font-size: 4rem;
-                        margin-bottom: 1.5rem;
-                    }
-
-                    .nutrition-list{
-                        list-style: none;
-                        text-align: left;
-                        margin-top: 1.5rem;
-
-                        li{
-                            padding: 0.8rem 0;
-                            border-bottom: 1px solid #eee;
-
-                            &::before{
-                                content: "✓";
-                                color: vars.$success-color;
-                                margin-right: 1rem;
+                        background: vars.$neutral-light;
+                        padding: 2.5rem;
+                        border-radius: 15px;
+                        text-align: center;
+                        transition: transform 0.3s ease;
+    
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+    
+                        .nutrition-icon {
+                            font-size: 4rem;
+                            margin-bottom: 1.5rem;
+                        }
+    
+                        .nutrition-list{
+                            list-style: none;
+                            text-align: left;
+                            margin-top: 1.5rem;
+    
+                            li{
+                                padding: 0.8rem 0;
+                                border-bottom: 1px solid #eee;
+    
+                                &::before{
+                                    content: "✓";
+                                    color: vars.$success-color;
+                                    margin-right: 1rem;
+                                }
                             }
                         }
-                    }
-
-                    .avoid-list{
-                        list-style: none;
-                        text-align: left;
-                        margin-top: 1.5rem;
-
-                        li{
-                            padding: 0.8rem 0;
-                            border-bottom: 1px solid #eee;
-
-                            &::before{
-                                content: "⚠️";
-                                margin-right: 1rem;
+    
+                        .avoid-list{
+                            list-style: none;
+                            text-align: left;
+                            margin-top: 1.5rem;
+    
+                            li{
+                                padding: 0.8rem 0;
+                                border-bottom: 1px solid #eee;
+    
+                                &::before{
+                                    content: "⚠️";
+                                    margin-right: 1rem;
+                                }
                             }
                         }
+                }
+            }
+            
+            // Nova classe para listas de detalhes
+            .details-list {
+                list-style-type: none;
+                padding-left: 1rem;
+                margin: 1.5rem 0;
+                
+                li {
+                    position: relative;
+                    padding-left: 1.5rem;
+                    margin-bottom: 0.8rem;
+                    line-height: 1.5;
+                    
+                    &:before {
+                        content: "•";
+                        position: absolute;
+                        left: 0;
+                        color: vars.$primary-color;
+                        font-weight: bold;
                     }
                 }
+            }
+            
+            // Nova classe para subseções
+            .subsection {
+                margin-top: 3rem;
+                padding: 1.5rem 0;
             }
         }
     }
@@ -114,6 +172,80 @@
                 .activity-icon {
                     font-size: 3.5rem;
                     margin-bottom: 1rem;
+                }
+                
+                // Nova classe para detalhes do exercício
+                &.exercise-card {
+                    .exercise-details {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 1rem;
+                        font-size: 0.9rem;
+                        
+                        span {
+                            margin-bottom: 0.5rem;
+                            padding: 0.3rem 0.5rem;
+                            border-radius: 4px;
+                            
+                            &.intensity {
+                                background-color: rgba(231, 76, 60, 0.1);
+                                color: #e74c3c;
+                            }
+                            
+                            &.frequency {
+                                background-color: rgba(52, 152, 219, 0.1);
+                                color: #3498db;
+                            }
+                            
+                            &.duration {
+                                background-color: rgba(46, 204, 113, 0.1);
+                                color: #2ecc71;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Nova seção de dicas
+        .tips-section {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: vars.$neutral-light;
+            border-radius: 15px;
+            
+            .tips-list {
+                list-style-type: none;
+                padding-left: 1rem;
+                margin: 2rem 0;
+                
+                li {
+                    position: relative;
+                    padding-left: 2rem;
+                    margin-bottom: 1rem;
+                    line-height: 1.6;
+                    
+                    &:before {
+                        content: "✓";
+                        position: absolute;
+                        left: 0;
+                        color: vars.$success-color;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            
+            .important-note {
+                margin-top: 2rem;
+                padding: 1.2rem;
+                background-color: rgba(241, 196, 15, 0.1);
+                border-left: 3px solid #f1c40f;
+                font-size: 0.95rem;
+                line-height: 1.5;
+                
+                strong {
+                    color: #d35400;
                 }
             }
         }
