@@ -2,81 +2,433 @@
     "disorders": [
         {
             "id": 1,
-            "title": "Ansiedade Generalizada",
-            "description": "Caracterizado por preocupação excessiva e persistente que interfere nas atividades diárias.",
+            "title": "Depressão",
+            "description": "A depressão é um transtorno mental caracterizado por uma tristeza profunda e persistente, perda de interesse nas atividades diárias e alterações no funcionamento físico e emocional. É uma condição séria que pode afetar a qualidade de vida e até levar ao suicídio se não for tratado especificamente.",
+            "bannerImage": "/src/assets/images/depressao-scaled.jpg",
+            "causes": {
+                "biologicos": "Desequilíbrios químicos cerebrais",
+                "geneticos": "Histórico familiar",
+                "psicologicos": "Traumas e baixa autoestima",
+                "ambientais": "Isolamento social e perdas"
+            },
+            "causesDescription": "A depressão surge da combinação complexa de fatores biológicos, psicológicos e ambientais, afetando a regulação de neurotransmissores como serotonina e noradrenalina, e sendo agravada por eventos estressores.",
             "symptoms": [
-                "Inquietação constante",
-                "Fadiga frequente",
-                "Dificuldade de concentração",
-                "Tensão muscular",
-                "Distúrbios do sono"
+                {
+                    "icon": "😞",
+                    "title": "Humor Depressivo",
+                    "description": "Tristeza intensa e persistente na maior parte do dia"
+                },
+                {
+                    "icon": "💔",
+                    "title": "Anedonia",
+                    "description": "Perda de interesse em atividades prazerosas"
+                },
+                {
+                    "icon": "⚡",
+                    "title": "Fadiga",
+                    "description": "Perda de energia e cansaço persistente"
+                },
+                {
+                    "icon": "😴",
+                    "title": "Distúrbios do Sono",
+                    "description": "Insônia ou hipersonia recorrente"
+                },
+                {
+                    "icon": "⚖️",
+                    "title": "Alterações de Peso",
+                    "description": "Mudanças significativas no apetite"
+                },
+                {
+                    "icon": "🧠",
+                    "title": "Déficit Cognitivo",
+                    "description": "Dificuldade de concentração e decisões"
+                }
             ],
-            "link": "/ansiedade"
-        },
-        {
-            "id": 2,
-            "title": "Depressão Maior",
-            "description": "Transtorno de humor caracterizado por sentimentos persistentes de tristeza e perda de interesse.",
-            "symptoms": [
-                "Humor deprimido",
-                "Perda de prazer",
-                "Alterações de peso",
-                "Fadiga extrema",
-                "Pensamentos suicidas"
+            "treatments": [
+                {
+                    "step": 1,
+                    "title": "Psicoterapia",
+                    "description": "TCC e outras terapias comportamentais"
+                },
+                {
+                    "step": 2,
+                    "title": "Medicação",
+                    "description": "Antidepressivos ISRS e similares"
+                },
+                {
+                    "step": 3,
+                    "title": "Estilo de Vida",
+                    "description": "Exercícios e alimentação balanceada"
+                },
+                {
+                    "step": 4,
+                    "title": "Apoio Social",
+                    "description": "Rede de apoio e grupos terapêuticos"
+                }
             ],
+            "physicalActivityBenefits": [
+                {
+                    "icon": "🧪",
+                    "title": "Neurotransmissores",
+                    "description": "Aumento de serotonina e endorfinas"
+                },
+                {
+                    "icon": "🧘",
+                    "title": "Controle do Estresse",
+                    "description": "Redução dos níveis de cortisol"
+                },
+                {
+                    "icon": "👥",
+                    "title": "Integração Social",
+                    "description": "Atividades em grupo e interações"
+                }
+            ],
+            "additionalInfo": "Atividades leves como caminhadas e ioga já apresentam benefícios significativos quando praticadas regularmente",
             "link": "/depressao"
         },
         {
-            "id": 3,
-            "title": "Transtorno Bipolar",
-            "description": "Condição mental com variações extremas de humor entre mania e depressão.",
+            "id": 2,
+            "title": "Ansiedade",
+            "description": "A ansiedade é uma ocorrência natural do organismo em situações de estresse ou perigo, mas quando se torna excessiva, persistente e interfere na qualidade de vida, pode se transformar em um transtorno de ansiedade.",
+            "bannerImage": "/src/assets/images/ansiedade-scaled.jpg",
+            "causes": {
+                "biologicos": "Desequilíbrio nos neurotransmissores",
+                "geneticos": "Predisposição familiar",
+                "psicologicos": "Traumas e experiências negativas",
+                "ambientais": "Pressão no trabalho e problemas pessoais"
+            },
+            "causesDescription": "A ansiedade surge quando mecanismos naturais de resposta ao perigo são ativados constantemente, afetando neurotransmissores como dopamina, serotonina e noradrenalina, em combinação com fatores genéticos e ambientais.",
             "symptoms": [
-                "Episódios maníacos",
-                "Humor eufórico",
-                "Grandiosidade",
-                "Aceleração do pensamento",
-                "Comportamentos de risco"
+                {
+                    "icon": "😰",
+                    "title": "Preocupação Excessiva",
+                    "description": "Inquietação constante sem motivo aparente"
+                },
+                {
+                    "icon": "💭",
+                    "title": "Dificuldade de Concentração",
+                    "description": "Pensamentos acelerados e dispersos"
+                },
+                {
+                    "icon": "😤",
+                    "title": "Irritabilidade",
+                    "description": "Reações desproporcionais a pequenos estresses"
+                },
+                {
+                    "icon": "💓",
+                    "title": "Sintomas Físicos",
+                    "description": "Taquicardia, falta de ar e tremores"
+                },
+                {
+                    "icon": "💪",
+                    "title": "Tensão Muscular",
+                    "description": "Músculos rígidos e dores tensionais"
+                },
+                {
+                    "icon": "😴",
+                    "title": "Insônia",
+                    "description": "Dificuldade para adormecer ou manter o sono"
+                }
             ],
-            "link": "/bipolar"
+            "treatments": [
+                {
+                    "step": 1,
+                    "title": "Psicoterapia",
+                    "description": "TCC e técnicas de reestruturação cognitiva"
+                },
+                {
+                    "step": 2,
+                    "title": "Medicação",
+                    "description": "Ansiolíticos e antidepressivos quando necessário"
+                },
+                {
+                    "step": 3,
+                    "title": "Técnicas de Relaxamento",
+                    "description": "Mindfulness, respiração e meditação"
+                },
+                {
+                    "step": 4,
+                    "title": "Mudança de Estilo de Vida",
+                    "description": "Exercícios, sono adequado e redução de cafeína"
+                }
+            ],
+            "physicalActivityBenefits": [
+                {
+                    "icon": "🧘",
+                    "title": "Redução do Estresse",
+                    "description": "Diminuição de cortisol e adrenalina"
+                },
+                {
+                    "icon": "😌",
+                    "title": "Bem-estar Mental",
+                    "description": "Liberação de endorfinas e serotonina"
+                },
+                {
+                    "icon": "💤",
+                    "title": "Melhora do Sono",
+                    "description": "Regulação do ciclo circadiano"
+                }
+            ],
+            "additionalInfo": "Atividades aeróbicas, como corrida, natação e ciclismo, são especialmente benéficas para reduzir a ansiedade",
+            "link": "/ansiedade"
+        },
+        {
+            "id": 3,
+            "title": "Estresse",
+            "description": "O estresse é uma resposta natural do organismo às situações exigidas, como pressão no trabalho, problemas financeiros ou conflitos pessoais. Embora níveis moderados possam ser benéficos, o estresse crônico pode levar a problemas físicos e psicológicos graves.",
+            "bannerImage": "/src/assets/images/estresse-scaled.jpg",
+            "causes": {
+                "biologicos": "Alterações hormonais (cortisol e adrenalina)",
+                "geneticos": "Variações na resposta ao estresse",
+                "psicologicos": "Alta cobrança pessoal e perfeccionismo",
+                "ambientais": "Problemas financeiros e excesso de trabalho"
+            },
+            "causesDescription": "O estresse é desencadeado quando o corpo identifica uma ameaça, liberando hormônios que preparam para uma resposta de luta ou fuga. Quando crônico, prejudica diversos sistemas do organismo.",
+            "symptoms": [
+                {
+                    "icon": "🤕",
+                    "title": "Sintomas Físicos",
+                    "description": "Dores de cabeça, tensão muscular e fadiga"
+                },
+                {
+                    "icon": "😠",
+                    "title": "Sintomas Emocionais",
+                    "description": "Irritabilidade, ansiedade e desmotivação"
+                },
+                {
+                    "icon": "🧠",
+                    "title": "Sintomas Cognitivos",
+                    "description": "Dificuldade de concentração e lapsos de memória"
+                },
+                {
+                    "icon": "🍺",
+                    "title": "Sintomas Comportamentais",
+                    "description": "Isolamento social e uso excessivo de substâncias"
+                },
+                {
+                    "icon": "💓",
+                    "title": "Sintomas Cardiovasculares",
+                    "description": "Taquicardia e aumento da pressão arterial"
+                },
+                {
+                    "icon": "😴",
+                    "title": "Distúrbios do Sono",
+                    "description": "Insônia e sono não reparador"
+                }
+            ],
+            "treatments": [
+                {
+                    "step": 1,
+                    "title": "Técnicas de Relaxamento",
+                    "description": "Meditação, respiração e mindfulness"
+                },
+                {
+                    "step": 2,
+                    "title": "Reorganização do Cotidiano",
+                    "description": "Gerenciamento de tempo e definição de prioridades"
+                },
+                {
+                    "step": 3,
+                    "title": "Estilo de Vida",
+                    "description": "Alimentação equilibrada e sono de qualidade"
+                },
+                {
+                    "step": 4,
+                    "title": "Terapia Psicológica",
+                    "description": "Desenvolvimento de estratégias de enfrentamento"
+                }
+            ],
+            "physicalActivityBenefits": [
+                {
+                    "icon": "🧪",
+                    "title": "Equilíbrio Hormonal",
+                    "description": "Redução de cortisol e adrenalina"
+                },
+                {
+                    "icon": "🧠",
+                    "title": "Clareza Mental",
+                    "description": "Melhora da concentração e criatividade"
+                },
+                {
+                    "icon": "💤",
+                    "title": "Qualidade do Sono",
+                    "description": "Facilitação do sono profundo e reparador"
+                }
+            ],
+            "additionalInfo": "Caminhada, corrida, yoga e pilates são atividades recomendadas para reduzir o estresse",
+            "link": "/estresse"
         },
         {
             "id": 4,
-            "title": "Transtorno Obsessivo-Compulsivo",
-            "description": "Padrão de pensamentos indesejados (obsessões) e comportamentos repetitivos (compulsões).",
+            "title": "TDAH",
+            "description": "O TDAH (Transtorno do Déficit de Atenção e Hiperatividade) é um distúrbio neurobiológico caracterizado por dificuldades de atenção, impulsividade e, em alguns casos, hiperatividade, afetando o desempenho escolar, profissional e social.",
+            "bannerImage": "/src/assets/images/tdah-scaled.jpg",
+            "causes": {
+                "biologicos": "Alterações nos neurotransmissores (dopamina)",
+                "geneticos": "Alta hereditariedade e predisposição familiar",
+                "psicologicos": "Fatores que afetam o desenvolvimento cerebral",
+                "ambientais": "Exposição a toxinas e complicações na gestação"
+            },
+            "causesDescription": "O TDAH está ligado a diferenças na estrutura e função cerebral, especialmente nas áreas responsáveis pelo controle de impulsos e atenção, com forte componente genético.",
             "symptoms": [
-                "Pensamentos intrusivos",
-                "Rituais repetitivos",
-                "Medo de contaminação",
-                "Verificação constante",
-                "Necessidade de simetria"
+                {
+                    "icon": "🤔",
+                    "title": "Déficit de Atenção",
+                    "description": "Dificuldade em manter o foco em tarefas"
+                },
+                {
+                    "icon": "⏩",
+                    "title": "Impulsividade",
+                    "description": "Ações sem pensar nas consequências"
+                },
+                {
+                    "icon": "🏃",
+                    "title": "Hiperatividade",
+                    "description": "Inquietação e dificuldade em ficar parado"
+                },
+                {
+                    "icon": "📝",
+                    "title": "Desorganização",
+                    "description": "Dificuldade com planejamento e organização"
+                },
+                {
+                    "icon": "⏰",
+                    "title": "Gestão do Tempo",
+                    "description": "Problemas com prazos e procrastinação"
+                },
+                {
+                    "icon": "😡",
+                    "title": "Instabilidade Emocional",
+                    "description": "Mudanças rápidas de humor e baixa frustração"
+                }
             ],
-            "link": "/toc"
+            "treatments": [
+                {
+                    "step": 1,
+                    "title": "Medicação",
+                    "description": "Estimulantes ou não-estimulantes"
+                },
+                {
+                    "step": 2,
+                    "title": "Terapia Comportamental",
+                    "description": "Desenvolvimento de rotinas e organização"
+                },
+                {
+                    "step": 3,
+                    "title": "Adaptações",
+                    "description": "Modificações no ambiente de estudo/trabalho"
+                },
+                {
+                    "step": 4,
+                    "title": "Estilo de Vida",
+                    "description": "Exercícios físicos e alimentação adequada"
+                }
+            ],
+            "physicalActivityBenefits": [
+                {
+                    "icon": "🧠",
+                    "title": "Neurotransmissores",
+                    "description": "Aumento de dopamina e noradrenalina"
+                },
+                {
+                    "icon": "🧩",
+                    "title": "Função Cognitiva",
+                    "description": "Melhora da memória e planejamento"
+                },
+                {
+                    "icon": "😌",
+                    "title": "Controle dos Impulsos",
+                    "description": "Redução da hiperatividade e impulsividade"
+                }
+            ],
+            "additionalInfo": "Esportes que exigem estratégia e disciplina, como artes marciais e natação, são especialmente benéficos para pessoas com TDAH",
+            "link": "/tdah"
         },
         {
             "id": 5,
-            "title": "Estresse Pós-Traumático",
-            "description": "Distúrbio de ansiedade desencadeado por evento traumático vivenciado ou testemunhado.",
+            "title": "Transtornos Alimentares",
+            "description": "Os transtornos alimentares são distúrbios psicológicos caracterizados por padrões alimentares anormais e uma relação disfuncional com o próprio corpo. Os mais comuns são anorexia nervosa, bulimia nervosa e transtorno da compulsão alimentar.",
+            "bannerImage": "/src/assets/images/transtornos-alimentares-scaled.jpg",
+            "causes": {
+                "biologicos": "Desequilíbrios hormonais e neurológicos",
+                "geneticos": "Predisposição familiar para transtornos",
+                "psicologicos": "Baixa autoestima e perfeccionismo",
+                "ambientais": "Pressão estética e influência das mídias"
+            },
+            "causesDescription": "Os transtornos alimentares resultam de uma interação complexa entre fatores genéticos, psicológicos, socioculturais e ambientais, afetando principalmente a percepção corporal e a relação com a comida.",
             "symptoms": [
-                "Revivência do trauma",
-                "Pesadelos frequentes",
-                "Hipervigilância",
-                "Evitação de gatilhos",
-                "Embotamento emocional"
+                {
+                    "icon": "⚖️",
+                    "title": "Anorexia Nervosa",
+                    "description": "Restrição alimentar severa e medo de engordar"
+                },
+                {
+                    "icon": "🚽",
+                    "title": "Bulimia Nervosa",
+                    "description": "Compulsão seguida de purgação"
+                },
+                {
+                    "icon": "🍔",
+                    "title": "Compulsão Alimentar",
+                    "description": "Consumo excessivo sem comportamentos compensatórios"
+                },
+                {
+                    "icon": "🪞",
+                    "title": "Distorção da Imagem",
+                    "description": "Percepção distorcida do próprio corpo"
+                },
+                {
+                    "icon": "😰",
+                    "title": "Ansiedade Alimentar",
+                    "description": "Medo e rituais relacionados à comida"
+                },
+                {
+                    "icon": "💪",
+                    "title": "Exercício Compulsivo",
+                    "description": "Atividade física excessiva para compensação"
+                }
             ],
-            "link": "/tept"
-        },
-        {
-            "id": 6,
-            "title": "Transtorno Alimentar",
-            "description": "Padrões alimentares prejudiciais que afetam a saúde física e mental.",
-            "symptoms": [
-                "Preocupação extrema com peso",
-                "Dietas restritivas",
-                "Compulsão alimentar",
-                "Distorção da imagem corporal",
-                "Uso de laxantes"
+            "treatments": [
+                {
+                    "step": 1,
+                    "title": "Equipe Multidisciplinar",
+                    "description": "Psicólogo, psiquiatra e nutricionista"
+                },
+                {
+                    "step": 2,
+                    "title": "Psicoterapia",
+                    "description": "TCC e terapia interpessoal"
+                },
+                {
+                    "step": 3,
+                    "title": "Reeducação Alimentar",
+                    "description": "Desenvolvimento de relação saudável com a comida"
+                },
+                {
+                    "step": 4,
+                    "title": "Apoio Familiar",
+                    "description": "Engajamento da família no processo terapêutico"
+                }
             ],
-            "link": "/alimentar"
+            "physicalActivityBenefits": [
+                {
+                    "icon": "🏄",
+                    "title": "Relação Corporal",
+                    "description": "Melhora da percepção e aceitação do corpo"
+                },
+                {
+                    "icon": "🧠",
+                    "title": "Regulação Emocional",
+                    "description": "Redução da ansiedade relacionada à comida"
+                },
+                {
+                    "icon": "👥",
+                    "title": "Aspecto Social",
+                    "description": "Redução do isolamento e interação saudável"
+                }
+            ],
+            "additionalInfo": "A atividade física deve ser orientada por profissionais, evitando que se torne uma forma de compensação ou obsessão",
+            "link": "/transtornos-alimentares"
         }
     ]
 }
