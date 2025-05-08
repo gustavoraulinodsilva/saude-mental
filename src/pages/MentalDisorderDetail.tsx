@@ -2,8 +2,60 @@ import React, { useEffect, useState } from "react";
 import '../sass/pages/_mental-disorder-detail.scss';
 import { CiDesktopMouse2 } from "react-icons/ci";
 import FloatingHelpButton from "../components/FloatingHelpButton";
+import { useParams } from "react-router-dom";
+
+interface DisorderData{
+    id: number;
+    title: string;
+    description: string;
+    bannerImage: string;
+    causes: {
+        biological: string;
+        genetic: string;
+        psychological: string;
+        environmental: string;
+    }
+    causesDescription: string;
+    symptoms: Array<{
+        icon: string;
+        title: string;
+        description: string;
+    }>;
+    treatments: Array<{
+        step: number;
+        title: string;
+        description: string;
+    }>;
+    physicalActivityBenefits: Array<{
+        icon: string;
+        title: string;
+        description: string;
+    }>;
+    additionalInfo: string;
+    link: string;
+}
 
 const MentalDisorderDetail: React.FC = () => {
+    const [disorderData, setDisorderData] = useState<DisorderData | null>(null);
+    const {id} = useParams<{id: string}>();
+    
+    useEffect(() => {
+        import('../data/disorders.json').then(module => {
+            const disorders = module.default.disorders;
+            const foundDisorder = disorders.find(d => 
+              d.id === parseInt(id || "") || 
+              d.link === `/${id}`
+            );
+            
+            if (foundDisorder) {
+                setDisorderData(foundDisorder);
+            }
+        });
+      }, [id]);
+
+    if(!disorderData) {
+        return <div>Carregando...</div>;
+    }
 
     return(
         <section className="disorder-detail-page">
@@ -12,12 +64,11 @@ const MentalDisorderDetail: React.FC = () => {
                     <img src="/src/assets/images/ansiedade-scaled.jpg" alt="anciedade" />
                 </div>
                 <div className="container">
-                    <h1 className="disorder-title">Depressão</h1>
+                    <h1 className="disorder-title">{disorderData.title}</h1>
                     <div className="disorder-content">
                         <h3 className="title">Você sabia?</h3>
                         <p className="desc">
-                            A depressão é um transtorno mental caracterizado por uma tristeza profunda e persistente, perda de interesse nas atividades diárias e alterações no funcionamento físico e emocional. 
-                            É uma condição séria que pode afetar a qualidade de vida e até levar ao suicídio se não for tratado especificamente.
+                            {disorderData.description}
                         </p>
                     </div>  
                 </div>
@@ -35,22 +86,22 @@ const MentalDisorderDetail: React.FC = () => {
                             <div className="info-box">
                                 <div className="info-item">
                                     <span className="info-label">Biológicos</span>
-                                    <span className="info-value">Desequilíbrios químicos cerebrais</span>
+                                    <span className="info-value">{disorderData.causes.biological}</span>
                                 </div>
                                 <div className="info-item">
                                     <span className="info-label">Genéticos</span>
-                                    <span className="info-value">Histórico familiar</span>
+                                    <span className="info-value">{disorderData.causes.genetic}</span>
                                 </div>
                                 <div className="info-item">
                                     <span className="info-label">Psicológicos</span>
-                                    <span className="info-value">Traumas e baixa autoestima</span>
+                                    <span className="info-value">{disorderData.causes.psychological}</span>
                                 </div>
                                 <div className="info-item">
                                     <span className="info-label">Ambientais</span>
-                                    <span className="info-value">Isolamento social e perdas</span>
+                                    <span className="info-value">{disorderData.causes.environmental}</span>
                                 </div>
                             </div>
-                            <p className="description">A depressão surge da combinação complexa de fatores biológicos, psicológicos e ambientais, afetando a regulação de neurotransmissores como serotonina e noradrenalina, e sendo agravada por eventos estressores.</p>
+                            <p className="description">{disorderData.causesDescription}</p>
                         </article>
                     </div>
                 </section>
@@ -58,85 +109,43 @@ const MentalDisorderDetail: React.FC = () => {
                 <section className="symptoms-section">
                     <h2>Sintomas Principais</h2>
                     <div className="symptoms-grid">
-                        <div className="symptom-card">
-                            <div className="symptom-icon">😞</div>
-                            <h3>Humor Depressivo</h3>
-                            <p>Tristeza intensa e persistente na maior parte do dia</p>
-                        </div>
-                        <div className="symptom-card">
-                            <div className="symptom-icon">💔</div>
-                            <h3>Anedonia</h3>
-                            <p>Perda de interesse em atividades prazerosas</p>
-                        </div>
-                        <div className="symptom-card">
-                            <div className="symptom-icon">⚡</div>
-                            <h3>Fadiga</h3>
-                            <p>Perda de energia e cansaço persistente</p>
-                        </div>
-                        <div className="symptom-card">
-                            <div className="symptom-icon">😴</div>
-                            <h3>Distúrbios do Sono</h3>
-                            <p>Insônia ou hipersonia recorrente</p>
-                        </div>
-                        <div className="symptom-card">
-                            <div className="symptom-icon">⚖️</div>
-                            <h3>Alterações de Peso</h3>
-                            <p>Mudanças significativas no apetite</p>
-                        </div>
-                        <div className="symptom-card">
-                            <div className="symptom-icon">🧠</div>
-                            <h3>Déficit Cognitivo</h3>
-                            <p>Dificuldade de concentração e decisões</p>
-                        </div>
+                        {disorderData.symptoms.map((symptom, index) => (
+                            <div key={index} className="symptom-card">
+                                <div className="symptom-icon">{symptom.icon}</div>
+                                <h3>{symptom.title}</h3>
+                                <p>{symptom.description}</p>
+                            </div>
+                        ))}
                     </div>
                 </section>
 
                 <section className="treatment-section">
                     <h2>Abordagens de Tratamento</h2>
                     <div className="treatment-timeline">
-                        <div className="treatment-step">
-                            <div className="step-number">1</div>
-                            <h3>Psicoterapia</h3>
-                            <p>TCC e outras terapias comportamentais</p>
-                        </div>
-                        <div className="treatment-step">
-                            <div className="step-number">2</div>
-                            <h3>Medicação</h3>
-                            <p>Antidepressivos ISRS e similares</p>
-                        </div>
-                        <div className="treatment-step">
-                            <div className="step-number">3</div>
-                            <h3>Estilo de Vida</h3>
-                            <p>Exercícios e alimentação balanceada</p>
-                        </div>
-                        <div className="treatment-step">
-                            <div className="step-number">4</div>
-                            <h3>Apoio Social</h3>
-                            <p>Rede de apoio e grupos terapêuticos</p>
-                        </div>
+                        {disorderData.treatments.map((treatment) => (
+                            <div key={treatment.step} className="treatment-step">
+                                <div className="step-number">{treatment.step}</div>
+                                <div className="step-content">
+                                    <h3>{treatment.title}</h3>
+                                    <p>{treatment.description}</p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </section>
 
                 <section className="benefits-section">
                     <h2>Benefícios da Atividade Física</h2>
                     <div className="benefits-grid">
-                        <div className="benefit-card">
-                            <div className="benefit-icon">🧪</div>
-                            <h3>Neurotransmissores</h3>
-                            <p>Aumento de serotonina e endorfinas</p>
-                        </div>
-                        <div className="benefit-card">
-                            <div className="benefit-icon">🧘</div>
-                            <h3>Controle do Estresse</h3>
-                            <p>Redução dos níveis de cortisol</p>
-                        </div>
-                        <div className="benefit-card">
-                            <div className="benefit-icon">👥</div>
-                            <h3>Integração Social</h3>
-                            <p>Atividades em grupo e interações</p>
-                        </div>
+                        {disorderData.physicalActivityBenefits.map((benefit, index) => (
+                            <div key={index} className="benefit-card">
+                                <div className="benefit-icon">{benefit.icon}</div>
+                                <h3>{benefit.title}</h3>
+                                <p>{benefit.description}</p>
+                            </div>
+                        ))}
                     </div>
-                    <p className="additional-info">*Atividades leves como caminhadas e ioga já apresentam benefícios significativos quando praticadas regularmente</p>
+                    <p className="additional-info">{disorderData.additionalInfo}</p>
                 </section>
                 <FloatingHelpButton targetId="emergency" />
             </main>

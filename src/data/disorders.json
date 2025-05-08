@@ -6,10 +6,10 @@
             "description": "A depressão é um transtorno mental caracterizado por uma tristeza profunda e persistente, perda de interesse nas atividades diárias e alterações no funcionamento físico e emocional. É uma condição séria que pode afetar a qualidade de vida e até levar ao suicídio se não for tratado especificamente.",
             "bannerImage": "/src/assets/images/depressao-scaled.jpg",
             "causes": {
-                "biologicos": "Desequilíbrios químicos cerebrais",
-                "geneticos": "Histórico familiar",
-                "psicologicos": "Traumas e baixa autoestima",
-                "ambientais": "Isolamento social e perdas"
+                "biological": "Desequilíbrios químicos cerebrais",
+                "genetic": "Histórico familiar",
+                "psychological": "Traumas e baixa autoestima",
+                "environmental": "Isolamento social e perdas"
             },
             "causesDescription": "A depressão surge da combinação complexa de fatores biológicos, psicológicos e ambientais, afetando a regulação de neurotransmissores como serotonina e noradrenalina, e sendo agravada por eventos estressores.",
             "symptoms": [
@@ -92,10 +92,10 @@
             "description": "A ansiedade é uma ocorrência natural do organismo em situações de estresse ou perigo, mas quando se torna excessiva, persistente e interfere na qualidade de vida, pode se transformar em um transtorno de ansiedade.",
             "bannerImage": "/src/assets/images/ansiedade-scaled.jpg",
             "causes": {
-                "biologicos": "Desequilíbrio nos neurotransmissores",
-                "geneticos": "Predisposição familiar",
-                "psicologicos": "Traumas e experiências negativas",
-                "ambientais": "Pressão no trabalho e problemas pessoais"
+                "biological": "Desequilíbrio nos neurotransmissores",
+                "genetic": "Predisposição familiar",
+                "psychological": "Traumas e experiências negativas",
+                "environmental": "Pressão no trabalho e problemas pessoais"
             },
             "causesDescription": "A ansiedade surge quando mecanismos naturais de resposta ao perigo são ativados constantemente, afetando neurotransmissores como dopamina, serotonina e noradrenalina, em combinação com fatores genéticos e ambientais.",
             "symptoms": [
@@ -178,10 +178,10 @@
             "description": "O estresse é uma resposta natural do organismo às situações exigidas, como pressão no trabalho, problemas financeiros ou conflitos pessoais. Embora níveis moderados possam ser benéficos, o estresse crônico pode levar a problemas físicos e psicológicos graves.",
             "bannerImage": "/src/assets/images/estresse-scaled.jpg",
             "causes": {
-                "biologicos": "Alterações hormonais (cortisol e adrenalina)",
-                "geneticos": "Variações na resposta ao estresse",
-                "psicologicos": "Alta cobrança pessoal e perfeccionismo",
-                "ambientais": "Problemas financeiros e excesso de trabalho"
+                "biological": "Alterações hormonais (cortisol e adrenalina)",
+                "genetic": "Variações na resposta ao estresse",
+                "psychological": "Alta cobrança pessoal e perfeccionismo",
+                "environmental": "Problemas financeiros e excesso de trabalho"
             },
             "causesDescription": "O estresse é desencadeado quando o corpo identifica uma ameaça, liberando hormônios que preparam para uma resposta de luta ou fuga. Quando crônico, prejudica diversos sistemas do organismo.",
             "symptoms": [
@@ -264,10 +264,10 @@
             "description": "O TDAH (Transtorno do Déficit de Atenção e Hiperatividade) é um distúrbio neurobiológico caracterizado por dificuldades de atenção, impulsividade e, em alguns casos, hiperatividade, afetando o desempenho escolar, profissional e social.",
             "bannerImage": "/src/assets/images/tdah-scaled.jpg",
             "causes": {
-                "biologicos": "Alterações nos neurotransmissores (dopamina)",
-                "geneticos": "Alta hereditariedade e predisposição familiar",
-                "psicologicos": "Fatores que afetam o desenvolvimento cerebral",
-                "ambientais": "Exposição a toxinas e complicações na gestação"
+                "biological": "Alterações nos neurotransmissores (dopamina)",
+                "genetic": "Alta hereditariedade e predisposição familiar",
+                "psychological": "Fatores que afetam o desenvolvimento cerebral",
+                "environmental": "Exposição a toxinas e complicações na gestação"
             },
             "causesDescription": "O TDAH está ligado a diferenças na estrutura e função cerebral, especialmente nas áreas responsáveis pelo controle de impulsos e atenção, com forte componente genético.",
             "symptoms": [
@@ -350,10 +350,10 @@
             "description": "Os transtornos alimentares são distúrbios psicológicos caracterizados por padrões alimentares anormais e uma relação disfuncional com o próprio corpo. Os mais comuns são anorexia nervosa, bulimia nervosa e transtorno da compulsão alimentar.",
             "bannerImage": "/src/assets/images/transtornos-alimentares-scaled.jpg",
             "causes": {
-                "biologicos": "Desequilíbrios hormonais e neurológicos",
-                "geneticos": "Predisposição familiar para transtornos",
-                "psicologicos": "Baixa autoestima e perfeccionismo",
-                "ambientais": "Pressão estética e influência das mídias"
+                "biological": "Desequilíbrios hormonais e neurológicos",
+                "genetic": "Predisposição familiar para transtornos",
+                "psychological": "Baixa autoestima e perfeccionismo",
+                "environmental": "Pressão estética e influência das mídias"
             },
             "causesDescription": "Os transtornos alimentares resultam de uma interação complexa entre fatores genéticos, psicológicos, socioculturais e ambientais, afetando principalmente a percepção corporal e a relação com a comida.",
             "symptoms": [
