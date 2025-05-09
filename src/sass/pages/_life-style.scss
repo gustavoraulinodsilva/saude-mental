@@ -1,4 +1,5 @@
 @use "../base/variables" as vars;
+@use "sass:color";
 
 .lifestyle-page{
     position: relative;
@@ -6,7 +7,9 @@
     .lifestyle-hero {
         position: relative;
         min-height: 60vh;
-        background: linear-gradient(135deg, vars.$secondary-color, vars.$primary-color);
+        background: linear-gradient(135deg, 
+            color.adjust(vars.$nutrition-dark-green, $lightness: 5%), 
+            vars.$exercise-dark-blue);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -35,10 +38,27 @@
 
         .nutrition-section {
             margin-bottom: 6rem;
+            border-bottom: 3px solid rgba(vars.$nutrition-dark-green, 0.2);
+            padding-bottom: 4rem;
 
         h2{
             font-size: 3rem;
             margin-bottom: 1.5rem;
+            color: vars.$nutrition-dark-green;
+            text-align: center;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background: linear-gradient(to right, vars.$nutrition-dark-green, vars.$nutrition-orange);
+                border-radius: 2px;
+            }
         }
 
         .section-intro {
@@ -72,18 +92,37 @@
 
                 // Seu código existente para nutrition-card
                 .nutrition-card {
-                        background: vars.$neutral-light;
+                        background: white;
                         padding: 2.5rem;
                         border-radius: 15px;
                         text-align: center;
-                        transition: transform 0.3s ease;
-    
-                        &:hover{
+                        transition: all 0.3s ease;
+                        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.07);
+        
+                        &:nth-child(1) {
+                            border-top: 3px solid vars.$nutrition-dark-green;
+                        }
+                    
+                        &:nth-child(2) {
+                            border-top: 3px solid vars.$nutrition-orange;
+                        }
+                    
+                        &:nth-child(3) {
+                            border-top: 3px solid vars.$nutrition-yellow;
+                        }
+
+                        &:hover {
                             transform: translateY(-5px);
+                            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
                         }
     
                         .nutrition-icon {
                             font-size: 4rem;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        h3 {
+                            color: vars.$nutrition-dark-green;
                             margin-bottom: 1.5rem;
                         }
     
@@ -99,7 +138,7 @@
     
                                 &::before{
                                     content: "✓";
-                                    color: vars.$success-color;
+                                    color: vars.$nutrition-dark-green;
                                     margin-right: 1rem;
                                 }
                             }
@@ -115,7 +154,7 @@
                                 border-bottom: 1px solid #eee;
                                 font-size: 1.4rem;
     
-                                &::before{
+                                &::before {
                                     content: "⚠️";
                                     margin-right: 1rem;
                                 }
@@ -140,7 +179,7 @@
                         content: "•";
                         position: absolute;
                         left: 0;
-                        color: vars.$primary-color;
+                        color: vars.$nutrition-orange;
                         font-weight: bold;
                     }
                 }
@@ -149,13 +188,17 @@
             .subsection {
                 margin-top: 3rem;
                 padding: 1.5rem 0;
+
+                h3 {
+                    color: vars.$nutrition-orange;
+                }
             }
 
             .nutrition-quote {
                 margin: 2rem 0;
                 padding: 1rem 2rem;
-                border-left: 4px solid vars.$success-color;
-                background-color: rgba(76, 175, 80, 0.1);
+                border-left: 4px solid vars.$nutrition-yellow;
+                background-color: rgba(vars.$nutrition-yellow, 0.1);
                 font-style: italic;
                 line-height: 1.6;
                 font-size: 1.2rem;
@@ -166,15 +209,49 @@
 
     .activities-section {
         margin: 6rem 0;
+        position: relative;
 
-        h2{
-            font-size: 3rem;
+        &::before {
+                content: '🏃';
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 2rem;
+                background: white;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .subsection-title{
-            font-size: 2rem;
-            margin: 2rem;
+        h2 {
+            font-size: 3rem;
             text-align: center;
+            color: vars.$exercise-dark-blue;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 3px;
+                background: linear-gradient(to right, vars.$exercise-red, vars.$exercise-orange);
+                border-radius: 2px;
+            }
+        }
+
+        .subsection-title {
+            font-size: 2rem;
+            margin: 3rem 0;
+            text-align: center;
+            color: vars.$exercise-dark-blue;
         }
 
         .activities-grid {
@@ -185,21 +262,41 @@
 
             .activity-card {
                 background: white;
-                padding: 2rem;
-                border-radius: 15px;
-                text-align: center;
-                box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+                    padding: 2rem;
+                    border-radius: 15px;
+                    text-align: center;
+                    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+                    transition: all 0.3s ease;
+                    
+                    &:nth-child(3n+1) {
+                        border-top: 3px solid vars.$exercise-red;
+                    }
+                    
+                    &:nth-child(3n+2) {
+                        border-top: 3px solid vars.$exercise-orange;
+                    }
+                    
+                    &:nth-child(3n+3) {
+                        border-top: 3px solid vars.$exercise-dark-blue;
+                    }
+                    
+                    &:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+                    }
 
-                .activity-icon {
-                    font-size: 3.5rem;
-                    margin-bottom: 1rem;
-                }
+                    .activity-icon {
+                        font-size: 3.5rem;
+                        margin-bottom: 1rem;
+                        color: vars.$exercise-red;
+                    }
 
-                h3{
-                    font-size: 1.6rem;
-                    line-height: 1;
-                    margin-bottom: 1rem;
-                }
+                    h3 {
+                        font-size: 1.6rem;
+                        line-height: 1;
+                        margin-bottom: 1rem;
+                        color: vars.$exercise-dark-blue;
+                    }
 
                 p{
                     font-size: 1.4rem;
@@ -214,22 +311,23 @@
                         
                         span {
                             margin-bottom: 0.5rem;
-                            padding: 0.3rem 0.5rem;
+                            padding: 0.5rem;
                             border-radius: 4px;
+                            font-weight: 500;
                             
                             &.intensity {
-                                background-color: rgba(231, 76, 60, 0.1);
-                                color: #e74c3c;
+                                background-color: rgba(vars.$exercise-red, 0.15);
+                                color: vars.$exercise-red;
                             }
                             
                             &.frequency {
-                                background-color: rgba(52, 152, 219, 0.1);
-                                color: #3498db;
+                                background-color: rgba(vars.$exercise-orange, 0.15);
+                                color: vars.$exercise-orange;
                             }
                             
                             &.duration {
-                                background-color: rgba(46, 204, 113, 0.1);
-                                color: #2ecc71;
+                                background-color: rgba(vars.$exercise-dark-blue, 0.15);
+                                color: vars.$exercise-dark-blue;
                             }
                         }
                     }
@@ -239,57 +337,52 @@
 
         .tips-section {
             margin-top: 4rem;
-            padding: 2rem;
-            background: vars.$neutral-light;
+            padding: 2.5rem;
+            background: linear-gradient(to bottom right, white, rgba(vars.$exercise-orange, 0.1));
             border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 
-            h3{
+            h3 {
                 font-size: 2rem;
+                color: vars.$exercise-dark-blue;
+                margin-bottom: 1.5rem;
             }
             
-            .tips-list {
-                list-style-type: none;
-                padding-left: 1rem;
-                margin: 2rem 0;
-                
-                li {
-                    position: relative;
-                    padding-left: 2rem;
-                    margin-bottom: 1rem;
-                    line-height: 1.6;
-                    font-size: 1.4rem;
-                    
-                    &:before {
-                        content: "✓";
-                        position: absolute;
-                        left: 0;
-                        color: vars.$success-color;
-                        font-weight: bold;
-                        font-size: 1.4rem;
-                    }
-                }
+            .tips-list li::before {
+                color: vars.$exercise-red;
             }
             
             .important-note {
                 margin-top: 2rem;
                 padding: 1.2rem;
-                background-color: rgba(241, 196, 15, 0.1);
-                border-left: 3px solid #f1c40f;
+                background-color: rgba(vars.$exercise-orange, 0.1);
+                border-left: 3px solid vars.$exercise-orange;
                 font-size: 1.4rem;
                 line-height: 1.5;
                 
                 strong {
-                    color: #d35400;
+                    color: vars.$exercise-red;
                 }
             }
         }
     }
 
-    .benefits-section {
-        background: vars.$neutral-light;
-        padding: 4rem;
-        border-radius: 15px;
-        margin: 4rem 0;
+.benefits-section {
+    background: linear-gradient(135deg, 
+        rgba(vars.$nutrition-dark-green, 0.05),
+        rgba(vars.$exercise-dark-blue, 0.05));
+    padding: 4rem;
+    border-radius: 15px;
+    margin: 4rem 0;
+    border-top: 2px solid rgba(vars.$exercise-red, 0.5);
+    border-bottom: 2px solid rgba(vars.$nutrition-dark-green, 0.5);
+
+    h2 {
+        color: color.mix(vars.$exercise-dark-blue, vars.$nutrition-dark-green, 50%);
+        text-align: center;
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
 
         .benefits-grid {
             display: grid;
@@ -300,14 +393,57 @@
             .benefit-card {
                 text-align: center;
                 padding: 2rem;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                
+                &:nth-child(1) {
+                    border-top: 3px solid vars.$exercise-red;
+                }
+                
+                &:nth-child(2) {
+                    border-top: 3px solid vars.$nutrition-orange;
+                }
+                
+                &:nth-child(3) {
+                    border-top: 3px solid vars.$nutrition-dark-green;
+                }
+                
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                }
 
-                h3{
-                    color: vars.$primary-color;
+                h3 {
+                    color: color.mix(vars.$exercise-red, vars.$nutrition-dark-green, 50%);
                     font-size: 3.5rem;
                     margin-bottom: 1rem;
+                }
+                
+                p {
+                    color: #444;
+                    font-size: 1.4rem;
                 }
             }
         }
     }
+}
 
+@media (max-width: 768px) {
+    .lifestyle-page {
+        .lifestyle-content {
+            max-width: 90%;
+            
+            h2 {
+                font-size: 2.5rem;
+            }
+            
+            .nutrition-grid,
+            .activities-grid,
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
 }
