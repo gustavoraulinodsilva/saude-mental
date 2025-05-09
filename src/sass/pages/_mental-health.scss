@@ -1,4 +1,5 @@
 @use "../base/variables" as vars;
+@use "sass:color";
 
 .mental-health-page{
     position: relative;
@@ -10,7 +11,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        background-color: vars.$primary-color;
+        background: linear-gradient(135deg, vars.$mental-deep-blue, vars.$mental-light-purple);
 
         .hero-banner{
             position: absolute;
@@ -33,7 +34,7 @@
                 width: 100%;
                 height: 100%;
                 z-index: 2;
-                background: linear-gradient(rgba(0, 0, 0, 0.7));
+                background: linear-gradient(rgba(115, 147, 179, 0.6), rgba(212,191,255,0.7));
                 mix-blend-mode: multiply;
             }
         }
@@ -80,6 +81,11 @@
                 height: 50px;
                 transition: background-color 0.3s ease;
 
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    transform: translateY(-3px);
+                }
+
                 svg {
                 color: #fff;
                 }
@@ -98,15 +104,15 @@
                 max-width: 80%;
                 margin: 0 auto 6rem;
                 padding: 5rem;
-                background: vars.$neutral-light;
                 border-radius: 15px;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+                background: linear-gradient(to bottom right, white, rgba(vars.$mental-light-blue, 0.2));
+                box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     
                 h2{
                     text-align: center;
                     margin-bottom: 3rem;
                     font-size: 3.5rem;
-                    color: vars.$primary-color;
+                    color: vars.$mental-deep-blue;
                 }
 
                 p{
@@ -120,10 +126,10 @@
                     margin: 3rem auto;
     
                     .importance-box{
-                        background: #f8f9fa;
+                        background: linear-gradient(to right, white, rgba(vars.$mental-soft-green, 0.1));
                         padding: 2.5rem;
                         border-radius: 10px;
-                        border-left: 4px solid vars.$secondary-color;
+                        border-left: 4px solid vars.$mental-soft-green;
                         margin: 2rem 0;
     
     
@@ -140,7 +146,7 @@
     
                                 &::before{
                                     content: '✓';
-                                    color: vars.$success-color;
+                                    color: vars.$mental-soft-green;
                                     font-weight: bold;
                                 }
                             }
@@ -152,6 +158,7 @@
                         h3{
                             margin-bottom: 2rem;
                             font-size: 2rem;
+                            color: color.adjust(vars.$mental-deep-blue, $lightness: -10%);
                         }
     
                         .stats-grid{
@@ -163,14 +170,20 @@
                             .stat-item{
                                 text-align: center;
                                 padding: 2.5rem;
-                                background: white;
+                                background: linear-gradient(to bottom right, white, rgba(vars.$mental-light-purple, 0.15));
                                 border-radius: 10px;
                                 box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                                transition: transform 0.3s ease;
+
+                                &:hover {
+                                    transform: translateY(-3px);
+                                    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+                                }
     
                                 .stat-number{
                                     font-size: 2.5rem;
                                     font-weight: 700;
-                                    color: vars.$primary-color;
+                                    color: vars.$mental-deep-blue;
                                 }
                             }
                         }
@@ -186,7 +199,7 @@
                     text-align: center;
                     font-size: 2.8rem;
                     margin-bottom: 1.5rem;
-                    color: vars.$primary-color;
+                    color: vars.$mental-deep-blue;
                 }
 
                 .section-intro{
