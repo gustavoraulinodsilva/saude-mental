@@ -1,199 +1,246 @@
 @use "../base/variables" as vars;
+@use "sass:color";
 
-.footer{
-    background: vars.$neutral-dark;
-    color: #fff;
-    padding: 5rem 0 2rem;
+.footer {
+  // Mantém o gradiente das novas cores, mas com estrutura do antigo footer
+  background: linear-gradient(135deg, vars.$mental-light-blue 0%, vars.$mental-light-purple 100%);
+  color: #2A3D45;
+  padding: 5rem 0 2rem; // Voltando ao padding original
 
-    .footer-alert{
-        background: linear-gradient(to right, vars.$primary-color, #1a4465);
-        padding: 6rem 0;
-        border-bottom: 3px solid vars.$accent-color;
-        position: relative;
-        overflow: hidden;
+  .footer-alert {
+    // Usando padrão do antigo código com as novas cores
+    background: linear-gradient(to right, vars.$mental-light-blue, vars.$mental-light-purple);
+    padding: 6rem 0; // Padding mais espaçoso do antigo
+    border-bottom: 3px solid vars.$mental-soft-green; // Nova cor, estilo antigo
+    position: relative;
+    overflow: hidden;
 
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                45deg,
-                rgba(255,255,255,0.05),
-                rgba(255,255,255,0.05) 10px,
-                transparent 10px,
-                transparent 20px
-            );
-        }
-
-        .container{
-
-            .footer-resource{
-                max-width: 800px;
-                margin: 0 auto;
-                background: rgba(255, 255, 255, 0.95);
-                backdrop-filter: blur(10px);
-                border-radius: 15px;
-                padding: 3rem;
-                position: relative;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-                border: 1px solid rgba(255,255,255,0.2);
-
-                h3{
-                    color: vars.$primary-color;
-                    text-align: center;
-                    font-size: 2.4rem;
-                    margin-bottom: 2.5rem;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                }
-
-                .help-list{
-                    color: vars.$neutral-dark;
-                    margin-bottom: 3rem;
-                    list-style: none;
-
-                    li{
-                        margin-bottom: 1.5rem;
-                        padding-left: 3rem;
-                        position: relative;
-                        font-size: 1.6rem;
-                        line-height: 1.6;
-
-                        &::before{
-                            content: '❗';
-                            color: vars.$accent-color;
-                            position: absolute;
-                            left: 0;
-                            font-size: 1.8rem;
-                            top: 0.2rem;
-                        }
-
-                        a{
-                            color: vars.$secondary-color;
-                            text-decoration: none;
-                            font-weight: 600;
-                            transition: all 0.3s ease;
-
-                            &:hover{
-                                color: vars.$primary-color;
-                                text-decoration: underline;
-                            }
-                        }
-                    }
-                }
-
-                .emergency-button {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 1rem;
-                    width: fit-content;
-                    margin: 2.5rem auto 0;
-                    padding: 1.5rem 4rem;
-                    font-size: 1.8rem;
-                    background: vars.$accent-color;
-                    color: vars.$neutral-dark;
-                    border: none;
-                    border-radius: 50px;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-
-                    &:hover{
-                        transform: translateY(-2px);
-                        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-                        background: #ffd369;
-                    }
-
-                    &:active{
-                        transform: translateY(0);
-                    }
-                }
-            }
-        }
+    &::before {
+      // Mantendo o padrão de linhas do código antigo
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05) 10px,
+        transparent 10px,
+        transparent 20px
+      );
     }
 
-    .footer-content{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
+    .container {
+      .footer-resource {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
         padding: 3rem;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        // Mantendo borda esquerda verde do novo design
+        border-left: 5px solid vars.$mental-soft-green;
 
-        .footer-brand{
-
-            .footer-title{
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .footer-slogan{
-                font-size: 1.4rem;
-                opacity: 0.8;
-            }
+        h3 {
+          color: #2A3D45; // Nova cor
+          text-align: center;
+          font-size: 2.4rem;
+          margin-bottom: 2.5rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
         }
 
-        .footer-links{
-            display: flex;
-            align-items: center;
-            gap: 5rem;
-            
-            .link-group{
+        .help-list {
+          color: #2A3D45; // Nova cor
+          margin-bottom: 3rem;
+          list-style: none;
 
-                h4{
-                    font-family: 'Nunito Sans', sans-serif;
-                    font-size: 1.8rem;
-                    margin-bottom: 2rem;
-                }
+          li {
+            margin-bottom: 1.5rem;
+            padding-left: 3rem;
+            position: relative;
+            font-size: 1.6rem;
+            line-height: 1.6;
 
-                ul{
-                    list-style: none;
-
-                    li{
-                        margin-bottom: 1rem;
-
-                        a{
-                            color: white;
-                            text-decoration: none;
-                            font-size: 1.4rem;
-                            transition: opacity 0.3s ease;
-
-                            &:hover{
-                                opacity: 0.8;
-                            }
-                        }
-                    }
-                }
+            &::before {
+              content: '❗'; // Mantendo ícone original
+              color: vars.$mental-soft-green; // Nova cor
+              position: absolute;
+              left: 0;
+              font-size: 1.8rem;
+              top: 0.2rem;
             }
+
+            a {
+              color: vars.$mental-deep-blue; // Nova cor
+              text-decoration: none;
+              font-weight: 600;
+              transition: all 0.3s ease;
+
+              &:hover {
+                color: color.adjust(vars.$mental-deep-blue, $lightness: -15%);
+                text-decoration: underline;
+              }
+            }
+          }
         }
+
+        .emergency-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          width: fit-content;
+          margin: 2.5rem auto 0;
+          padding: 1.5rem 4rem;
+          font-size: 1.8rem;
+          background: linear-gradient(to right, vars.$mental-soft-green, #78D1B6); // Nova cor em gradiente
+          color: #2A3D45;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            background: color.adjust(vars.$mental-soft-green, $lightness: 5%);
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; // Usando align do antigo código
+    padding: 3rem;
+
+    .footer-brand {
+      .footer-title {
+        font-size: 2.5rem; // Tamanho original
+        margin-bottom: 1rem;
+        color: #2A3D45; // Nova cor
+      }
+
+      .footer-slogan {
+        font-size: 1.4rem; // Tamanho original
+        color: #4A6572; // Nova cor
+        font-style: italic;
+      }
     }
 
-    .footer-bottom{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 5rem; // Espaçamento original
+      
+      .link-group {
+        h4 {
+          font-family: 'Nunito Sans', sans-serif;
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+          color: #2A3D45; // Nova cor
+          border-bottom: 2px solid vars.$mental-light-purple; // Nova borda colorida
+          padding-bottom: 0.5rem;
+        }
+
+        ul {
+          list-style: none;
+
+          li {
+            margin-bottom: 1rem;
+
+            a {
+              color: #4A6572; // Nova cor
+              text-decoration: none;
+              font-size: 1.4rem;
+              transition: color 0.2s;
+              position: relative;
+
+              // Novo efeito hover do segundo código
+              &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: vars.$mental-light-purple;
+                transition: width 0.3s;
+              }
+
+              &:hover {
+                color: vars.$mental-deep-blue;
+
+                &::after {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 5rem; // Padding original
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    .copyright {
+      font-size: 1.2rem; // Tamanho original
+      color: #4A6572; // Nova cor
+    }
+
+    .partners {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      img {
+        height: 40px;
+        opacity: 0.8;
+        transition: opacity 0.2s;
         margin-top: 2rem;
-        padding: 0 5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-        .copyright{
-            font-size: 1.2rem;
-            opacity: 0.7;
+        &:hover {
+          opacity: 1;
         }
-
-        .partners{
-            display: flex;
-            align-items: center;
-            height: 100%;
-
-            img{
-                height: 40px;
-                width: 100%;
-                margin-top: 2rem;
-            }
-        }
+      }
     }
+  }
+  
+  // Mantendo a responsividade do novo código
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 }
