@@ -49,10 +49,10 @@
           .cta-button {
             background: linear-gradient(
               to right,
-              vars.$secondary-color,
-              vars.$success-color // Usando success-color como gradiente
+              vars.$mental-light-blue,
+              vars.$mental-light-purple // Usando success-color como gradiente
             );
-            color: vars.$white-color;
+            color: vars.$neutral-dark;
             padding: 1.2rem 3rem;
             border-radius: 30px;
             font-weight: 500;
