@@ -170,9 +170,9 @@ const LifeStyle: React.FC = () => {
                                 <h3>{exercise.name}</h3>
                                 <p>{exercise.benefits}</p>
                                 <div className="exercise-details">
-                                    <span>Intensidade: {exercise.intensity}</span>
-                                    <span>Frequência: {exercise.frequency}</span>
-                                    <span>Duração: {exercise.duration}</span>
+                                    <span className="intensity">Intensidade: {exercise.intensity}</span>
+                                    <span className="frequency">Frequência: {exercise.frequency}</span>
+                                    <span className="duration">Duração: {exercise.duration}</span>
                                 </div>
                             </div>
                         ))}

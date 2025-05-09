@@ -40,6 +40,12 @@
         p {
           font-size: 1.4rem;
           margin-bottom: 1.5rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .symptoms-list {
@@ -53,9 +59,11 @@
             font-size: 1.2rem;
 
             &::before {
-              content: "•";
+              content: '->';
               color: vars.$secondary-color;
-              margin-right: 0.5rem;
+              position: absolute;
+              left: -1.5rem;
+              font-size: 1.5rem;
             }
           }
         }

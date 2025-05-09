@@ -3,6 +3,7 @@ import '../sass/pages/_mental-health.scss'
 import DisorderCarousel from "../components/DisorderCarousel";
 import { MentalHealthData } from "../types/mentalHealthTypes";
 import disordersData from '../data/disorders.json';
+import { CiDesktopMouse2 } from "react-icons/ci";
 
 const MentalHealth: React.FC = () => {
     const [data, setData] = useState<MentalHealthData | null>(null);
@@ -29,9 +30,14 @@ const MentalHealth: React.FC = () => {
                     <h1>{data.hero.heroTitle}</h1>
                     <p className="hero-subtitle">{data.hero.heroSubtitle}</p>
                 </div>
+                <div className="move">
+                    <a href="#detail" className="scroll-to-another-section" aria-label="Role para baixo">
+                        <CiDesktopMouse2 size={32} />
+                    </a>
+                </div>
             </div>
             <main className="mental-health-content container">
-                <section className="mental-health-detail">
+                <section id="detail" className="mental-health-detail">
                     <article className="health-article">
                         <h2>{data.section.title}</h2>
                         <p>{data.section.content}</p>
