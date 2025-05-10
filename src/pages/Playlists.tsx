@@ -6,7 +6,7 @@ const Playlists: React.FC = () => {
     return(
         <main className="playlists-container">
             <div className="container">
-                <div className="text-container">
+                <div className="text-container" id="playlists">
                     <h1 className="page-title">Playlists Terapêuticas</h1>
                     <p className="page-subtitle">Selecione playlists curadas para diferentes necessidades de saúde mental</p>
                     <Link to={'/'} className="back-button">

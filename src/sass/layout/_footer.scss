@@ -99,8 +99,8 @@
           margin: 2.5rem auto 0;
           padding: 1.5rem 4rem;
           font-size: 1.8rem;
-          background: linear-gradient(to right, vars.$mental-soft-green, #78D1B6); // Nova cor em gradiente
-          color: #2A3D45;
+          background: #E74C3C;
+          color: #ffffff;
           border: none;
           border-radius: 50px;
           cursor: pointer;
@@ -110,7 +110,7 @@
           &:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            background: color.adjust(vars.$mental-soft-green, $lightness: 5%);
+            background: color.adjust(#E74C3C, $lightness: -8%);
           }
 
           &:active {

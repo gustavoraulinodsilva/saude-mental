@@ -1,4 +1,5 @@
 @use "../base/variables" as vars;
+@use "sass:color";
 
 .playlists-container{
     position: relative;
@@ -9,22 +10,34 @@
 
         .text-container{
             padding: 12rem 0 4rem;
-            background-color: vars.$neutral-dark;
+            background: linear-gradient(to right, 
+            color.adjust(vars.$music-purple, $lightness: -10%), 
+            color.adjust(vars.$music-blue, $lightness: -15%)
+            );
 
 
             .page-title {
                 font-size: 3.5rem;
-                color: vars.$accent-color;
+                color: #ffffff;
                 text-align: center;
                 margin-bottom: 1.5rem;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 120px;
+                    height: 4px;
+                    background: linear-gradient(to right, vars.$music-turquoise, vars.$music-purple);
+                    margin: 0.8rem auto 0;
+                    border-radius: 2px;
+                }
             }
             
             .page-subtitle {
                 font-size: 1.8rem;
-                color: vars.$neutral-light;
+                color: rgba(255, 255, 255, 0.9);
                 text-align: center;
                 margin-bottom: 4rem;
-                opacity: 0.9;
             }
     
             .back-button {
@@ -32,11 +45,15 @@
                 align-items: center;
                 gap: 1rem;
                 font-size: 1.6rem;
-                color: vars.$neutral-light;
+                color: white;
                 text-decoration: none;
+                margin-left: 2rem;
                 margin-bottom: 3rem;
                 padding: 1rem 4rem;
-                border-radius: 0.8rem;
+                border-radius: 2rem;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
                 transition: all 0.3s ease;
     
                 svg{
@@ -44,12 +61,12 @@
                     height: 24px;
 
                     path{
-                        fill: vars.$neutral-light;
+                        fill: white;
                     }
                 }
     
                 &:hover{
-                    background: rgba(42, 92, 130, 0.5);
+                    background: rgba(255, 255, 255, 0.25);
                     transform: translateX(-5px);
                 }
             }
@@ -59,13 +76,54 @@
             margin-bottom: 6rem;
             padding: 3rem;
 
-            .category-title {
-                font-size: 2.8rem;
-                color: vars.$primary-color;
-                margin-bottom: 3rem;
-                padding-bottom: 1rem;
-                border-bottom: 2px solid vars.$accent-color;
+            &:nth-of-type(1) {
+                .category-title {
+                    color: vars.$music-purple;
+                    border-color: vars.$music-purple;
+                }
+                
+                .playlist-card {
+                    border-top: 3px solid vars.$music-purple;
+                }
             }
+        
+        &:nth-of-type(2) {
+            .category-title {
+                color: vars.$music-blue;
+                border-color: vars.$music-blue;
+            }
+            
+            .playlist-card {
+                border-top: 3px solid vars.$music-blue;
+            }
+        }
+        
+        &:nth-of-type(3) {
+            .category-title {
+                color: vars.$music-turquoise;
+                border-color: vars.$music-turquoise;
+            }
+            
+            .playlist-card {
+                border-top: 3px solid vars.$music-turquoise;
+            }
+        }
+
+        .category-title {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid;
+        display: inline-block;
+        position: relative;
+        
+            &::before {
+            content: "♪";
+            display: inline-block;
+            margin-right: 1rem;
+            font-size: 2.4rem;
+            }
+        }
 
             .playlists-grid {
                 display: grid;
@@ -81,6 +139,7 @@
 
                     &:hover{
                         transform: translateY(-5px);
+                        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
                     }
 
                     iframe{
@@ -105,4 +164,31 @@
             }
         }
     }
+}
+
+// Responsividade
+@media (max-width: 768px) {
+  .playlists-container {
+    .container {
+      .text-container {
+        padding: 8rem 1rem 3rem;
+        
+        .page-title {
+          font-size: 2.8rem;
+        }
+        
+        .page-subtitle {
+          font-size: 1.5rem;
+        }
+      }
+      
+      .playlist-category {
+        padding: 2rem 1rem;
+        
+        .category-title {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
 }

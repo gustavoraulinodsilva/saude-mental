@@ -8,7 +8,7 @@
   height: 7rem;
   padding: 0 8rem;
   z-index: 99999;
-  background: rgba(94,110,132,0.4);
+  background: rgba(42, 60, 69, 0.6);
   backdrop-filter: blur(2rem);
   -webkit-backdrop-filter: blur(2rem);
 
@@ -58,7 +58,8 @@
         position: relative;
 
         &:hover {
-          color: vars.$mental-light-blue;
+          color: white;
+          text-shadow: 0 0 5px rgba(255,255,255,0.5);
         }
 
         &::after {
@@ -68,12 +69,21 @@
           left: 0;
           width: 0;
           height: 2px;
-          background: vars.$mental-light-blue;
+          background: white;
           transition: width 0.3s ease;
         }
 
         &:hover::after {
           width: 100%;
+        }
+
+        &.active {
+          font-weight: 600;
+          
+          &::after {
+            width: 100%;
+            background: white;
+          }
         }
       }
     }
