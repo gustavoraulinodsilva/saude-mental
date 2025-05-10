@@ -1,8 +1,10 @@
 import React from "react";
-import { Link, Links } from "react-router-dom";
+import { Link, Links, useLocation } from "react-router-dom";
 import "../sass/layout/_header.scss";
 
 const Header: React.FC = () => {
+    const location = useLocation();
+    const { pathname } = location;
     return (
     <header className="header">
         <nav className="nav">
@@ -21,9 +23,9 @@ const Header: React.FC = () => {
                 </a>
             </div>
             <ul className="nav-links">
-                <li><Link to="/saude-mental" className="nav-link">Saúde Mental</Link></li>
-                <li><Link to="/estilo-de-vida" className="nav-link">Estilo de Vida</Link></li>
-                <li><Link to="/avaliacao" className="nav-link">Avaliação</Link></li>
+                <li><Link to="/saude-mental" className={`nav-link ${pathname === '/saude-mental' ? 'active' : ''}`}>Saúde Mental</Link></li>
+                <li><Link to="/estilo-de-vida" className={`nav-link ${pathname === '/estilo-de-vida' ? 'active' : ''}`}>Estilo de Vida</Link></li>
+                <li><Link to="/avaliacao"  className={`nav-link ${pathname === '/avaliacao' ? 'active' : ''}`}>Avaliação</Link></li>
             </ul>
         </nav>
     </header>
