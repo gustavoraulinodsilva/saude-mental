@@ -27,7 +27,19 @@ interface nutritionData{
         content: string;
         complementary_pratices: string[];
     };
+    sectionFour: {
+        title: string;
+        content: string;
+        key_points: string[];
+        diets_impact: {
+            description: string;
+            healthy_diets: string[];
+            benefits: string;
+        };
+        practical_tip: string;
+    };
     conclusion: string;
+    references?: string[];
 }
 
 interface exerciseData{
@@ -63,6 +75,7 @@ const LifeStyle: React.FC = () => {
                     sectionOne: nutritionData.sectionOne,
                     sectionTwo: nutritionData.sectionTwo,
                     sectionThree: nutritionData.sectionThree,
+                    sectionFour: nutritionData.sectionFour,
                     conclusion: nutritionData.conclusion
                 }
             ],
@@ -140,6 +153,52 @@ const LifeStyle: React.FC = () => {
                             ))}
                         </ul>
                     </div>
+
+                    <div className="subsection psychiatric-nutrition">
+    <h3 className="psychiatric-title">{data.nutrition[0].sectionFour.title}</h3>
+    <p>{data.nutrition[0].sectionFour.content}</p>
+    
+    <div className="brain-food-container">
+        <div className="brain-food-visual">
+            <div className="brain-icon">🧠</div>
+            <div className="arrow-down">↓</div>
+            <div className="food-icon">🍲</div>
+        </div>
+        
+        <div className="key-points">
+            <h4>Pontos Importantes</h4>
+            <ul className="key-points-list">
+                {data.nutrition[0].sectionFour.key_points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                ))}
+            </ul>
+        </div>
+    </div>
+    
+    <div className="diets-impact">
+        <h4>Impacto das Dietas na Saúde Mental</h4>
+        <p>{data.nutrition[0].sectionFour.diets_impact.description}</p>
+        
+        <div className="diet-cards">
+            {data.nutrition[0].sectionFour.diets_impact.healthy_diets.map((diet, index) => (
+                <div key={index} className={`diet-card diet-${index}`}>
+                    <div className="diet-icon">{index === 0 ? '🫒' : '🍙'}</div>
+                    <p>{diet}</p>
+                </div>
+            ))}
+        </div>
+        
+        <p className="diet-benefits">{data.nutrition[0].sectionFour.diets_impact.benefits}</p>
+    </div>
+    
+    <div className="practical-tip">
+        <h4>Dica Prática</h4>
+        <div className="tip-content">
+            <div className="tip-icon">💡</div>
+            <p>{data.nutrition[0].sectionFour.practical_tip}</p>
+        </div>
+    </div>
+</div>
                     
                     <blockquote className="nutrition-quote">
                         {data.nutrition[0].conclusion}

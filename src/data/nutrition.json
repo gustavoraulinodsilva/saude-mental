@@ -29,5 +29,27 @@
         "Sono de qualidade"
       ]
     },
-    "conclusion": "A relação entre o que comemos e como nos sentimos emocionalmente é profunda e real. Uma alimentação equilibrada e rica em nutrientes pode ser uma grande aliada na prevenção e tratamento da depressão e ansiedade. Cuidar da mente também é cuidar do corpo — e isso começa pelo prato."
+    "sectionFour": {
+      "title": "Psiquiatria Nutricional: O Combustível do Cérebro",
+      "content": "O cérebro é um órgão em constante atividade, comandando desde pensamentos complexos até funções vitais como respiração e batimentos cardíacos, mesmo durante o sono. Este funcionamento ininterrupto exige um fornecimento constante de energia proveniente da alimentação.",
+      "key_points": [
+        "Alimentos de alta qualidade (ricos em vitaminas, minerais e antioxidantes) protegem o cérebro contra o estresse oxidativo causado por radicais livres.",
+        "Açúcares refinados e ultraprocessados prejudicam a regulação da insulina, aumentam inflamação e estão associados à piora de funções cerebrais e transtornos mentais.",
+        "Cerca de 95% da serotonina (neurotransmissor relacionado ao humor, sono e apetite) é produzida no intestino.",
+        "A microbiota intestinal saudável fortalece a barreira intestinal, reduz inflamações e melhora a comunicação entre intestino e cérebro."
+      ],
+      "diets_impact": {
+        "description": "Estudos mostram diferenças significativas entre padrões alimentares e o risco de desenvolver transtornos mentais:",
+        "healthy_diets": [
+          "Dieta Mediterrânea: rica em vegetais, frutas, grãos integrais, peixes e azeite",
+          "Dieta Japonesa: baseada em alimentos fermentados, vegetais, arroz e frutos do mar"
+        ],
+        "benefits": "Pessoas que seguem estas dietas tradicionais apresentam risco significativamente menor de desenvolver depressão em comparação com aquelas que seguem dietas ocidentais industrializadas."
+      },
+      "practical_tip": "Experimente eliminar alimentos processados e açúcares refinados por 2-3 semanas, depois os reintroduza gradualmente e observe as mudanças em seu humor e disposição mental."
+    },
+    "conclusion": "A relação entre o que comemos e como nos sentimos emocionalmente é profunda e real. Uma alimentação equilibrada e rica em nutrientes pode ser uma grande aliada na prevenção e tratamento da depressão e ansiedade. Cuidar da mente também é cuidar do corpo — e isso começa pelo prato.",
+    "references": [
+      "Harvard Health Publishing. Nutritional psychiatry: Your brain on food. 2015. https://www.health.harvard.edu/blog/nutritional-psychiatry-your-brain-on-food-201511168626"
+    ]
   }
