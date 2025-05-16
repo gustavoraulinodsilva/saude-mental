@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             <div className="footer-bottom">
                 <p className="copyright">© 2024 Saúde Mental - Todos os direitos reservados</p>
                 <div className="partners">
-                    <img src="/src/assets/images/fsg.png" alt="logo-fsg"/>
+                    <img src={`${import.meta.env.BASE_URL}images/fsg.png`} alt="logo-fsg"/>
                 </div>
             </div>
     </footer>
