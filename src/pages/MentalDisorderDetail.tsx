@@ -61,7 +61,7 @@ const MentalDisorderDetail: React.FC = () => {
         <section className="disorder-detail-page">
             <div className="disorder-hero">
                 <div className="banner">
-                    <img src="/src/assets/images/ansiedade-scaled.jpg" alt="anciedade" />
+                    <img src={`${import.meta.env.BASE_URL}${disorderData.bannerImage}`} alt="anciedade" />
                 </div>
                 <div className="container">
                     <h1 className="disorder-title">{disorderData.title}</h1>

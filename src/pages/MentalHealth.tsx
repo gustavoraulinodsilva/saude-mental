@@ -23,7 +23,7 @@ const MentalHealth: React.FC = () => {
         <section className="mental-health-page">
             <div className="mental-health-hero">
                 <div className="hero-banner">
-                    <img src={data.hero.image} alt="banner" />
+                    <img src={`${import.meta.env.BASE_URL}${data.hero.image}`} alt="banner" />
                     <div className="banner-overlay"></div>
                 </div>
                 <div className="container hero-content">

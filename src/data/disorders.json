@@ -4,7 +4,7 @@
             "id": 1,
             "title": "Depressão",
             "description": "A depressão é um transtorno mental caracterizado por uma tristeza profunda e persistente, perda de interesse nas atividades diárias e alterações no funcionamento físico e emocional. É uma condição séria que pode afetar a qualidade de vida e até levar ao suicídio se não for tratado especificamente.",
-            "bannerImage": "/src/assets/images/depressao-scaled.jpg",
+            "bannerImage": "/images/depressao-scaled.jpg",
             "causes": {
                 "biological": "Desequilíbrios químicos cerebrais",
                 "genetic": "Histórico familiar",
@@ -90,7 +90,7 @@
             "id": 2,
             "title": "Ansiedade",
             "description": "A ansiedade é uma ocorrência natural do organismo em situações de estresse ou perigo, mas quando se torna excessiva, persistente e interfere na qualidade de vida, pode se transformar em um transtorno de ansiedade.",
-            "bannerImage": "/src/assets/images/ansiedade-scaled.jpg",
+            "bannerImage": "/images/ansiedade-scaled.jpg",
             "causes": {
                 "biological": "Desequilíbrio nos neurotransmissores",
                 "genetic": "Predisposição familiar",
@@ -176,7 +176,7 @@
             "id": 3,
             "title": "Estresse",
             "description": "O estresse é uma resposta natural do organismo às situações exigidas, como pressão no trabalho, problemas financeiros ou conflitos pessoais. Embora níveis moderados possam ser benéficos, o estresse crônico pode levar a problemas físicos e psicológicos graves.",
-            "bannerImage": "/src/assets/images/estresse-scaled.jpg",
+            "bannerImage": "/images/estresse-scaled.jpg",
             "causes": {
                 "biological": "Alterações hormonais (cortisol e adrenalina)",
                 "genetic": "Variações na resposta ao estresse",
@@ -262,7 +262,7 @@
             "id": 4,
             "title": "TDAH",
             "description": "O TDAH (Transtorno do Déficit de Atenção e Hiperatividade) é um distúrbio neurobiológico caracterizado por dificuldades de atenção, impulsividade e, em alguns casos, hiperatividade, afetando o desempenho escolar, profissional e social.",
-            "bannerImage": "/src/assets/images/tdah-scaled.jpg",
+            "bannerImage": "/images/tdah-scaled.jpg",
             "causes": {
                 "biological": "Alterações nos neurotransmissores (dopamina)",
                 "genetic": "Alta hereditariedade e predisposição familiar",
@@ -348,7 +348,7 @@
             "id": 5,
             "title": "Transtornos Alimentares",
             "description": "Os transtornos alimentares são distúrbios psicológicos caracterizados por padrões alimentares anormais e uma relação disfuncional com o próprio corpo. Os mais comuns são anorexia nervosa, bulimia nervosa e transtorno da compulsão alimentar.",
-            "bannerImage": "/src/assets/images/transtornos-alimentares-scaled.jpg",
+            "bannerImage": "/images/transtornos-alimentares-scaled.jpg",
             "causes": {
                 "biological": "Desequilíbrios hormonais e neurológicos",
                 "genetic": "Predisposição familiar para transtornos",
