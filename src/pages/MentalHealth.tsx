@@ -11,6 +11,23 @@ const MentalHealth: React.FC = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        
+        const href = e.currentTarget.getAttribute('href');
+        if (!href) return;
+        
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+        
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+    };
+
     useEffect(() => {
         try {
             setContent(mentalHealthData as MentalHealthData);
@@ -41,7 +58,7 @@ const MentalHealth: React.FC = () => {
                     <p className="hero-subtitle">{content.hero.heroSubtitle}</p>
                 </div>
                 <div className="move">
-                    <a href="#detail" className="scroll-to-another-section" aria-label="Role para baixo">
+                    <a href="#detail" className="scroll-to-another-section" onClick={handleSmoothScroll} aria-label="Role para baixo">
                         <CiDesktopMouse2 size={32} />
                     </a>
                 </div>

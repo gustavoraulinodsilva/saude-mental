@@ -1,8 +1,23 @@
 import React from "react";
 import "../sass/layout/_footer.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer: React.FC = () => {
+    const navigate = useNavigate();
+
+    const navigateToSection = (path: string, sectionId: string) => (e: React.MouseEvent) => {
+        e.preventDefault();
+        
+        if (location.pathname === path) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            navigate(`${path}#${sectionId}`);
+        }
+    };
+
     return(
         <footer className="footer">
             <div className="footer-alert" id="emergency">
@@ -29,8 +44,8 @@ const Footer: React.FC = () => {
                         <h4>Navegação</h4>
                         <ul>
                             <li><Link to={'/saude-mental'}>Saúde Mental</Link></li>
-                            <li><a href="#alimentacao">Alimentação</a></li>
-                            <li><a href="#atividades">Atividades Físicas</a></li>
+                            <li><a href="#" onClick={navigateToSection('/estilo-de-vida', 'alimentacao')}>Alimentação</a></li>
+                            <li><a href="#" onClick={navigateToSection('/estilo-de-vida', 'atividades')}>Atividades Físicas</a></li>
                         </ul>
                     </div>
                     

@@ -94,6 +94,21 @@ const LifeStyle: React.FC = () => {
     setData(formattedData);
   }, []);
 
+  useEffect(() => {
+    if (data && location.hash) {
+      const targetId = location.hash.substring(1);
+      setTimeout(() => {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 300);
+    }
+  }, [data, location.hash]);
+
   if (!data) {
     return <div>Carregando...</div>;
   }

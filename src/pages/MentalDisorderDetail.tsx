@@ -38,13 +38,30 @@ interface DisorderData{
 const MentalDisorderDetail: React.FC = () => {
     const [disorderData, setDisorderData] = useState<DisorderData | null>(null);
     const {id} = useParams<{id: string}>();
+
+    const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        
+        const href = e.currentTarget.getAttribute('href');
+        if (!href) return;
+        
+        const targetId = href.replace('#', '');
+        const element = document.getElementById(targetId);
+        
+        if (element) {
+            element.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
+        }
+    };
     
     useEffect(() => {
         import('../data/disorders.json').then(module => {
             const disorders = module.default.disorders;
             const foundDisorder = disorders.find(d => 
-              d.id === parseInt(id || "") || 
-              d.link === `/${id}`
+                d.id === parseInt(id || "") || 
+                d.link === `/${id}`
             );
             
             if (foundDisorder) {
@@ -73,7 +90,7 @@ const MentalDisorderDetail: React.FC = () => {
                     </div>  
                 </div>
                 <div className="move-section">
-                    <a href="#container" className="move-btn" aria-label="Role para baixo">
+                    <a href="#container" className="move-btn" onClick={handleSmoothScroll} aria-label="Role para baixo">
                         <CiDesktopMouse2 size={32} />
                     </a>
                 </div>

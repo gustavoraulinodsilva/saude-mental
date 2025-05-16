@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel,Pagination } from "swiper/modules";
 import '../sass/components/_home-about-carousel.scss';
+import { Link } from "react-router-dom";
 
 export interface SlideData{
     title: string;
@@ -17,6 +18,11 @@ interface Props{
 }
 
 const HomeAboutCarousel: React.FC<Props> = ({slides}) => {
+
+    const isInternalLink = (link: string) => {
+        return !link.startsWith('http') && !link.startsWith('#');
+    };
+
     return (
         <div className="home-about-carousel">
             <Swiper
@@ -35,9 +41,21 @@ const HomeAboutCarousel: React.FC<Props> = ({slides}) => {
                             <p className="slide-text">{slide.content}</p>
                             {slide.cta && (
                                 <div className="slide-footer">
-                                    <a href={slide.cta.link} className="cta-button">
-                                    {slide.cta.label}
-                                    </a>
+                                    {isInternalLink(slide.cta.link) ? (
+                                        <Link 
+                                            to={slide.cta.link.replace(/^\//, '')} 
+                                            className="cta-button"
+                                        >
+                                            {slide.cta.label}
+                                        </Link>
+                                    ) : (
+                                        <a 
+                                            href={slide.cta.link} 
+                                            className="cta-button"
+                                        >
+                                            {slide.cta.label}
+                                        </a>
+                                    )}
                                 </div>
                             )}
                         </div>

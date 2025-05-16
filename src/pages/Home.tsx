@@ -30,6 +30,21 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = content?.hero.cta.link.replace('#', '');
+    
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        });
+      }
+    }
+  };
+
   useEffect(() => {
     try {
       setContent(homeData as HomeContent);
@@ -60,7 +75,7 @@ const Home: React.FC = () => {
           <p className="hero-text">
             {content.hero.desc}
           </p>
-          <a href={content.hero.cta.link} className="cta-button">
+          <a href={content.hero.cta.link} className="cta-button" onClick={handleSmoothScroll} aria-label="Ação de chamada para ação">
             {content.hero.cta.label}
           </a>
         </div>

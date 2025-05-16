@@ -23,7 +23,7 @@
                 "content": "Acreditamos que a informação é o primeiro passo para promover a saúde mental e transformar vidas.",
                 "cta": {
                     "label": "Acessar Recursos",
-                    "link": "/saude-mental"
+                    "link": "saude-mental"
                 }
             }
         ]
