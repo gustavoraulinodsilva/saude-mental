@@ -39,6 +39,8 @@ const FloatingHelpButton: React.FC<FloatingHelpButtonProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  console.log(isBottom);
+
   const handleClick = () => {
     document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
   };
