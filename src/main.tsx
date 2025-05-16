@@ -1,13 +1,13 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import "./sass/main.scss";
+import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import { HashRouter } from "react-router-dom";
+import "./sass/main.scss";
 
-createRoot(document.getElementById("root")!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );

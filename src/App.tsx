@@ -18,10 +18,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/saude-mental' element={<MentalHealth/>} />
-          <Route path='/:id' element={<MentalDisorderDetail/>} />
           <Route path='/estilo-de-vida' element={<LifeStyle/>} />
           <Route path='/playlists' element={<Playlists/>}/>
           <Route path='/avaliacao' element={<Evaluation/>}/>
+          <Route path='/:id' element={<MentalDisorderDetail/>} />
         </Routes>
       </main>
       <Footer/>
