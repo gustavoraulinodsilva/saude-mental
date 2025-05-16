@@ -1,4 +1,4 @@
-import { BrowserRouter as Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './sass/main.scss'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
