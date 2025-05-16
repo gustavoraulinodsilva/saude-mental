@@ -1,6 +1,8 @@
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "../sass/pages/_home.scss";
 import HomeAboutCarousel, { SlideData } from "../components/HomeAboutCarousel";
+// Importe o JSON diretamente em vez de usar fetch
+import homeData from "../data/home.json";
 
 //Interfaces
 interface HeroData{
@@ -24,35 +26,25 @@ interface HomeContent{
 }
 
 const Home: React.FC = () => {
-
-  // Estado para armazenar os dados carregados
   const [content, setContent] = useState<HomeContent | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/src/data/home.json')
-    .then((response) => {
-      if(!response.ok){
-        throw new Error("Erro ao carregar JSON");
-      }
-      return response.json();
-    })
-    .then((data: HomeContent) => {
-      setContent(data);
+    try {
+      setContent(homeData as HomeContent);
       setLoading(false);
-    })
-    .catch((error) => {
-      setError(error.message);
+    } catch (error) {
+      setError("Erro ao carregar os dados");
       setLoading(false);
-    });
+    }
   }, []);
 
   if(loading){
     return <div>Carregando....</div>;
   }
 
-  if(error){
+  if(error || !content){
     return <div>Erro: {error}</div>;
   }
 
@@ -60,16 +52,16 @@ const Home: React.FC = () => {
     <div className="home">
       <section className="hero">
         <div className="hero-banner">
-          <img src={content?.hero.image} alt="Banner" />
+          <img src={`${import.meta.env.BASE_URL}${content.hero.image}`} alt="Banner" />
           <div className="banner-overlay"></div>
         </div>
         <div className="hero-content container">
-          <h1 className="hero-title">{content?.hero.title}</h1>
+          <h1 className="hero-title">{content.hero.title}</h1>
           <p className="hero-text">
-            {content?.hero.desc}
+            {content.hero.desc}
           </p>
-          <a href={content?.hero.cta.link} className="cta-button">
-            {content?.hero.cta.label}
+          <a href={content.hero.cta.link} className="cta-button">
+            {content.hero.cta.label}
           </a>
         </div>
         <div className="hero-wave">
@@ -85,7 +77,7 @@ const Home: React.FC = () => {
       </section>
       <section id="sobre-projeto" className="about-section container">
         <div className="about-carousel">
-          <HomeAboutCarousel slides={content?.about.slides || []}/>
+          <HomeAboutCarousel slides={content.about.slides || []}/>
         </div>
       </section>
     </div>
