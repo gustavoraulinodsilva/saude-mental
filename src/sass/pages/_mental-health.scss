@@ -218,6 +218,42 @@
 }
 
 @media(max-width: 901px){
+
+    .mental-health-page{
+
+        .mental-health-content{
+
+            .mental-health-detail{
+
+                .health-article{
+                    padding: 3rem;
+    
+                    h2{
+                        font-size: 2.5rem;
+                    }
+    
+                    p{
+                        font-size: 1.2rem;
+                    }
+
+                    .article-grid{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                
+                }
+
+                .disorders-section h2{
+                    font-size: 2.5rem;
+                }
+
+                .section-intro{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+
     .disorders-carousel-section {
         padding: 4rem 0;
         width: 100%;
