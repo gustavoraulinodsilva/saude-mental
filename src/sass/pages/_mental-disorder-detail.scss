@@ -94,6 +94,7 @@
       position: absolute;
       z-index: 2;
       left: 50%;
+      right: 50%;
       transform: translateX(-50%);
       bottom: 5vh;
       display: flex;
@@ -523,14 +524,6 @@
           padding: 1.5rem;
         }
       }
-    }
-    
-    // Ajuste para o botão flutuante de ajuda em telas pequenas
-    .floating-help-button {
-      bottom: 2rem;
-      right: 1.5rem;
-      width: 4.5rem;
-      height: 4.5rem;
     }
   }
 }
