@@ -12,15 +12,15 @@
         "slides": [
             {
                 "title": "Sobre o projeto",
-                "content": "Desenvolvido por estudantes de engenharia e relações internacionais em parceria com a Faculdade FSG..."
+                "content": "Este projeto faz parte do Itinerário Extensionista da FSG (Faculdade da Serra Gaúcha) e tem como objetivo promover a saúde mental no ambiente corporativo. Desenvolvemos um site informativo e acessível que oferece conteúdos relevantes, orientações e recursos para ajudar colaboradores e empresas a lidarem melhor com questões de bem-estar emocional e psicológico no trabalho."
             },
             {
-                "title": "Como foi pensado",
-                "content": "Este projeto visa democratizar o acesso à informação qualificada sobre saúde mental..."
+                "title": "Por que criamos",
+                "content": "A iniciativa surgiu da percepção de que, apesar de ser um tema cada vez mais discutido, a saúde mental ainda enfrenta barreiras quando se trata de informação qualificada e acessível no contexto empresarial. Identificamos a necessidade de criar uma ponte entre o conhecimento acadêmico e as necessidades práticas dos profissionais."
             },
             {
-                "title": "Benefícios",
-                "content": "Acreditamos que a informação é o primeiro passo para promover a saúde mental e transformar vidas.",
+                "title": "Nosso impacto",
+                "content": "Nosso projeto une alunos e professores em uma experiência de aprendizado aplicada, contribuindo para ambientes de trabalho mais saudáveis, humanos e produtivos. Reforçamos o compromisso da FSG com a transformação social por meio da educação, levando informações valiosas que podem melhorar a qualidade de vida no ambiente corporativo.",
                 "cta": {
                     "label": "Acessar Recursos",
                     "link": "saude-mental"

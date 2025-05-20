@@ -363,9 +363,174 @@
       }
     }
   }
-  
-  // Adicione esta regura no final do arquivo
   .disorder-content {
-    position: relative; // Para o posicionamento absoluto do botão
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 901px) {
+  .disorder-detail-page {
+    .disorder-hero {
+      min-height: auto;
+      height: 100vh;
+      
+      .banner {
+        img {
+          transform: translate(-50%, -50%) scale(1.5);
+        }
+      }
+      
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 0 1rem;
+        
+        .disorder-title {
+          font-size: 2.8rem;
+          margin-bottom: 1rem;
+        }
+        
+        .disorder-content {
+          padding: 1.5rem;
+          
+          .title {
+            font-size: 2rem;
+          }
+          
+          .desc {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      
+      .move-section {
+        bottom: 2vh;
+      }
+    }
+    
+    .disorder-content {
+      max-width: 100%;
+      padding: 3rem 1rem;
+      
+      h2 {
+        font-size: 2.4rem;
+        margin-bottom: 2rem;
+      }
+      
+      .overview-section {
+        .content-grid {
+          flex-direction: column;
+          margin-bottom: 3rem;
+          
+          .key-info {
+            padding: 1.5rem;
+            width: 100%;
+            
+            .info-box {
+              grid-template-columns: repeat(2, 1fr);
+              gap: 1rem;
+              
+              .info-item {
+                padding: 1rem;
+                
+                .info-label {
+                  font-size: 1.2rem;
+                }
+                
+                .info-value {
+                  font-size: 1.4rem;
+                }
+              }
+            }
+            
+            .description {
+              font-size: 1.3rem;
+            }
+          }
+        }
+      }
+      
+      .symptoms-section {
+        margin: 3rem 0;
+        
+        .symptoms-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          
+          .symptom-card {
+            padding: 1.5rem;
+            
+            h3 {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+      
+      .treatment-section {
+        padding: 2rem 1.5rem;
+        margin: 3rem 0;
+        
+        .treatment-timeline {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          
+          .treatment-step {
+            padding: 1.5rem;
+            
+            h3 {
+              font-size: 1.6rem;
+            }
+          }
+        }
+      }
+      
+      .benefits-section {
+        margin: 3rem 0;
+        
+        h2 {
+          font-size: 2.4rem;
+          margin-bottom: 2rem;
+        }
+        
+        .benefits-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          
+          .benefit-card {
+            padding: 1.8rem;
+            
+            .benefit-icon {
+              font-size: 3rem;
+              margin-bottom: 1rem;
+            }
+            
+            h3 {
+              font-size: 1.8rem;
+            }
+            
+            p {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        
+        .additional-info {
+          font-size: 1.3rem;
+          padding: 1.5rem;
+        }
+      }
+    }
+    
+    // Ajuste para o botão flutuante de ajuda em telas pequenas
+    .floating-help-button {
+      bottom: 2rem;
+      right: 1.5rem;
+      width: 4.5rem;
+      height: 4.5rem;
+    }
   }
 }

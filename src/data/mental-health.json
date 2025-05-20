@@ -6,12 +6,15 @@
     },
     "section": {
         "title": "O que é Saúde Mental?",
-        "content": "A saúde mental refere-se ao nosso bem-estar emocional, psicológico e social. Ela afeta como pensamos, sentimos e agimos em diferentes situações da vida...",
+        "content": "Saúde mental é o estado de equilíbrio emocional, psicológico e social de uma pessoa. Ela influencia diretamente a forma como lidamos com o estresse, como nos relacionamos com os outros e como tomamos decisões no dia a dia. Ter uma boa saúde mental não significa estar feliz o tempo todo, mas sim ser capaz de enfrentar os desafios da vida, manter relações saudáveis e conhecer a si mesmo. A saúde mental está relacionada à capacidade de lidar com emoções, adaptar-se a mudanças, manter a autoestima e buscar qualidade de vida. Assim como cuidamos do corpo, também é essencial cuidar da mente, o que pode ser feito por meio de apoio psicológico, prática de atividades físicas, alimentação equilibrada, descanso adequado e convivência com pessoas que ofereçam apoio e afeto.",
         "importanceTitle": "Por que é importante?",
         "importance": [
             "Influencia relações pessoais e profissionais",
             "Impacta na produtividade e qualidade de vida",
-            "Fundamental para lidar com estresse"
+            "Fundamental para lidar com estresse",
+            "Promove o autocuidado e a prevenção de doenças físicas e mentais",
+            "Contribui para o fortalecimento do apoio social e da comunidade",
+            "Incentiva a busca por ajuda profissional e o tratamento adequado"
         ],
         "statisticTitle": "Dados Relevantes",
         "statistics": [
@@ -21,15 +24,15 @@
             },
             {
                 "percentage": "5,8%",
-                "description": "tem diagnóstico de depressão"
+                "description": "dos brasileiros têm diagnóstico de depressão, segundo a OMS (2023)"
             },
             {
-                "percentage": "5,8%",
-                "description": "tem diagnóstico de depressão"
+                "percentage": "68%",
+                "description": "de aumento nos afastamentos do trabalho por transtornos mentais em 2024"
             },
             {
-                "percentage": "5,8%",
-                "description": "tem diagnóstico de depressão"
+                "percentage": "16-24",
+                "description": "anos é a faixa etária com menor Índice de Cuidado e Saúde Mental (ICASM)"
             }
         ],
         "disorderTitle": "Transtornos Mentais Comuns",
