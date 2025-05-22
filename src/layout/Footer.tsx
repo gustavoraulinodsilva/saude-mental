@@ -25,11 +25,11 @@ const Footer: React.FC = () => {
                     <div className="resource-box footer-resource">
                         <h3>Busque Ajuda Imediata</h3>
                         <ul className="help-list">
-                            <li>CVV - 188 (Ligue 188 ou acesse <a href="https://www.cvv.org.br">cvv.org.br</a>)</li>
+                            <li>CVV - 188 (Ligue 188 ou acesse <a href="https://www.cvv.org.br" target="_blank">cvv.org.br</a>)</li>
                             <li>CAPS mais próximo da sua região</li>
                             <li>Psicólogos credenciados pelo CRP</li>
                         </ul>
-                        <button className="emergency-button">Ajuda Imediata</button>
+                        <a href="tel:188" className="emergency-button">Ajuda Imediata</a>
                     </div>
                 </div>
             </div>
@@ -53,14 +53,13 @@ const Footer: React.FC = () => {
                         <h4>Recursos</h4>
                         <ul>
                             <li><Link to={'/playlists'}>Playlists</Link></li>
-                            <li><a href="#">Profissionais</a></li>
-                            <li><a href="#">Ajuda Imediata</a></li>
+                            <li><a href="https://www.cvv.org.br" target="_blank">Ajuda Imediata</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <p className="copyright">© 2024 Saúde Mental - Todos os direitos reservados</p>
+                <p className="copyright">© 2025 Saúde Mental - Todos os direitos reservados</p>
                 <div className="partners">
                     <img src={`${import.meta.env.BASE_URL}images/fsg.png`} alt="logo-fsg"/>
                 </div>

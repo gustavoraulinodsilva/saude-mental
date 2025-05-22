@@ -21,12 +21,12 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
-        object-position: 85% center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-65%, -50%) scale(1.4);
-        transition: all 0.3s ease;
+        // object-position: 85% center;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-65%, -50%) scale(1.4);
+        // transition: all 0.3s ease;
       }
 
       &::before {
@@ -53,7 +53,7 @@
       position: absolute;
       z-index: 2;
       top: 50%;
-      left: 70%;
+      left: 60%;
       transform: translate(0%, -50%);
       color: #fff;
 
@@ -373,12 +373,6 @@
     .disorder-hero {
       min-height: auto;
       height: 100vh;
-      
-      .banner {
-        img {
-          transform: translate(-50%, -50%) scale(1.5);
-        }
-      }
       
       .container {
         position: absolute;
