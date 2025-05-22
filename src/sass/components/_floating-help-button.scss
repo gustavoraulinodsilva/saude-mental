@@ -56,3 +56,12 @@
     }
   }
 }
+
+@media (max-width:901px){
+  .floating-help-button{
+    bottom: 2rem;
+    right: 1.5rem;
+    width: 6rem;
+    height: 6rem;
+  }
+}
