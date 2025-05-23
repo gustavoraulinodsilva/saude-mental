@@ -72,6 +72,46 @@
             }
         }
 
+        // Nova seção de introdução
+        .introduction {
+            background: white;
+            padding: 4rem;
+            margin-top: -2rem;
+            margin-bottom: 4rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+            
+            h2 {
+                font-size: 2.6rem;
+                color: vars.$music-purple;
+                margin-bottom: 2rem;
+                position: relative;
+                display: inline-block;
+                
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 70%;
+                    height: 3px;
+                    background: linear-gradient(to right, vars.$music-purple, vars.$music-blue);
+                    margin-top: 0.8rem;
+                    border-radius: 2px;
+                }
+            }
+            
+            p {
+                font-size: 1.6rem;
+                line-height: 1.8;
+                color: vars.$neutral-dark;
+                text-align: justify;
+            }
+        }
+
         .playlist-category {
             margin-bottom: 6rem;
             padding: 3rem;
@@ -87,43 +127,51 @@
                 }
             }
         
-        &:nth-of-type(2) {
-            .category-title {
-                color: vars.$music-blue;
-                border-color: vars.$music-blue;
+            &:nth-of-type(2) {
+                .category-title {
+                    color: vars.$music-blue;
+                    border-color: vars.$music-blue;
+                }
+                
+                .playlist-card {
+                    border-top: 3px solid vars.$music-blue;
+                }
             }
             
-            .playlist-card {
-                border-top: 3px solid vars.$music-blue;
+            &:nth-of-type(3) {
+                .category-title {
+                    color: vars.$music-turquoise;
+                    border-color: vars.$music-turquoise;
+                }
+                
+                .playlist-card {
+                    border-top: 3px solid vars.$music-turquoise;
+                }
             }
-        }
-        
-        &:nth-of-type(3) {
-            .category-title {
-                color: vars.$music-turquoise;
-                border-color: vars.$music-turquoise;
-            }
-            
-            .playlist-card {
-                border-top: 3px solid vars.$music-turquoise;
-            }
-        }
 
-        .category-title {
-        font-size: 2.8rem;
-        margin-bottom: 3rem;
-        padding-bottom: 1rem;
-        border-bottom: 2px solid;
-        display: inline-block;
-        position: relative;
-        
-            &::before {
-            content: "♪";
-            display: inline-block;
-            margin-right: 1rem;
-            font-size: 2.4rem;
+            .category-title {
+                font-size: 2.8rem;
+                margin-bottom: 3rem;
+                padding-bottom: 1rem;
+                border-bottom: 2px solid;
+                display: inline-block;
+                position: relative;
+                
+                &::before {
+                    content: "♪";
+                    display: inline-block;
+                    margin-right: 1rem;
+                    font-size: 2.4rem;
+                }
             }
-        }
+
+            .category-description {
+                font-size: 1.6rem;
+                color: vars.$neutral-dark;
+                max-width: 800px;
+                margin-bottom: 3rem;
+                line-height: 1.6;
+            }
 
             .playlists-grid {
                 display: grid;
@@ -168,27 +216,76 @@
 
 // Responsividade
 @media (max-width: 768px) {
-  .playlists-container {
-    .container {
-      .text-container {
-        padding: 8rem 1rem 3rem;
-        
-        .page-title {
-          font-size: 2.8rem;
+    .playlists-container {
+        .container {
+            .text-container {
+                padding: 8rem 1rem 3rem;
+                
+                .page-title {
+                    font-size: 2.8rem;
+                }
+                
+                .page-subtitle {
+                    font-size: 1.5rem;
+                }
+                
+                .back-button {
+                    margin-left: 0;
+                    padding: 0.8rem 2rem;
+                }
+            }
+            
+            .introduction {
+                padding: 3rem 2rem;
+                max-width: 95%;
+                
+                h2 {
+                    font-size: 2.2rem;
+                }
+                
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+            
+            .playlist-category {
+                padding: 2rem 1rem;
+                
+                .category-title {
+                    font-size: 2.2rem;
+                }
+                
+                .category-description {
+                    font-size: 1.5rem;
+                }
+            }
         }
-        
-        .page-subtitle {
-          font-size: 1.5rem;
-        }
-      }
-      
-      .playlist-category {
-        padding: 2rem 1rem;
-        
-        .category-title {
-          font-size: 2.2rem;
-        }
-      }
     }
-  }
+}
+
+// Para telas muito pequenas
+@media (max-width: 480px) {
+    .playlists-container {
+        .container {
+            .text-container {
+                .page-title {
+                    font-size: 2.4rem;
+                }
+            }
+            
+            .introduction {
+                padding: 2.5rem 1.5rem;
+                
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+            
+            .playlist-category {
+                .playlists-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
 }

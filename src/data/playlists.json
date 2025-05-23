@@ -1,0 +1,75 @@
+{
+    "content": {
+        "pageTitle": "Playlists Terapêuticas",
+        "pageSubtitle": "Selecione playlists curadas para diferentes necessidades de saúde mental",
+        "introduction": {
+            "title": "A Influência da Música na Saúde Mental",
+            "content": "A música tem um poder significativo sobre nosso bem-estar emocional e saúde mental. Estudos científicos comprovam que ouvir música pode reduzir níveis de cortisol (hormônio do estresse), diminuir a ansiedade, melhorar o humor e até mesmo aliviar sintomas de depressão. As diferentes frequências e ritmos musicais podem estimular áreas específicas do cérebro, promovendo relaxamento, foco ou energia, dependendo da necessidade do momento. Através de playlists cuidadosamente selecionadas, podemos criar ambientes sonoros que auxiliam no tratamento complementar de diversos transtornos mentais, potencializando outros métodos terapêuticos e contribuindo para uma melhor qualidade de vida."
+        },
+        "categories": [
+            {
+                "title": "Lo-Fi para Concentração e Estudo",
+                "description": "Playlists para acalmar a mente e promover tranquilidade",
+                "playlists": [
+                    {
+                        "name": "Estudar 📔 Músicas | Lo-Fi para Concentração",
+                        "description": "Uma seleção de 60 faixas lo-fi ideais para manter o foco nos estudos ou no trabalho.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/77s6yiXXDgZZiBe40JVCIE?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "LoFi Focus 🖥 [Deep Concentration Music]",
+                        "description": "Com 310 músicas, essa playlist é perfeita para sessões prolongadas de concentração.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/5RcZbEycm4Yb2K5gHjxZGn?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "Study Lo-Fi Chill",
+                        "description": "Uma coleção com 30 mil curtidas, oferecendo batidas suaves para um ambiente de estudo tranquilo.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/2b7DdwLdmAHyv7Mc6NYxKG?utm_source=generator&theme=0"
+                    }
+                ]
+            },
+            {
+                "title": "Playlists para Academia e Treinos",
+                "description": "Trilhas sonoras para momentos de tensão e nervosismo",
+                "playlists": [
+                    {
+                        "name": "Academia 2025 Atualizada 💪 Treino 2025",
+                        "description": "Com 103 faixas, essa playlist é atualizada regularmente para manter sua rotina de exercícios energizada.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/7r0jq3NM6ZSnPJnJ5iDFez?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "Treino 2025 💪🏼 Top Músicas Para Treinar",
+                        "description": "Uma seleção com 82 músicas populares para motivar seus treinos de musculação e cardio.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/278mlOibTLiKvYZKhPHtlD?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "Workout Motivation Mix 2024:",
+                        "description": "Com 63 faixas, essa playlist oferece uma mistura de músicas motivacionais para impulsionar seu desempenho.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/1YK9iu1SDVq5Px74DKqnG0?utm_source=generator&theme=0"
+                    }
+                ]
+            },
+            {
+                "title": "Relaxamento, Estresse e Ansiedade",
+                "description": "Música para melhorar a concentração e o desempenho",
+                "playlists": [
+                    {
+                        "name": "Música Relaxante para Acalmar a Mente, Relaxar e Diminuir a Ansiedade",
+                        "description": "Uma extensa playlist com 317 músicas para ajudar a aliviar o estresse e a ansiedade.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/3ccJAYoyLr9GxU3KJZ5LDp?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "Meditação e Relaxamento",
+                        "description": "Curada pelo próprio Spotify, essa playlist é ideal para práticas de meditação e momentos de relaxamento.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/37i9dQZF1DXaKgOqDv3HpW?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "Para Acalmar a Ansiedade",
+                        "description": "Com mais de mil faixas, essa seleção é perfeita para momentos em que você precisa desacelerar e encontrar calma.",
+                        "spotifyEmbed": "//open.spotify.com/embed/playlist/6nVlroxRmcs6h03Jl18nfR?utm_source=generator&theme=0"
+                    }
+                ]
+            }
+        ]
+    }
+}
