@@ -67,6 +67,11 @@
                         "name": "Para Acalmar a Ansiedade",
                         "description": "Com mais de mil faixas, essa seleção é perfeita para momentos em que você precisa desacelerar e encontrar calma.",
                         "spotifyEmbed": "//open.spotify.com/embed/playlist/6nVlroxRmcs6h03Jl18nfR?utm_source=generator&theme=0"
+                    },
+                    {
+                        "name": "Sinfonia Serena: Clássicos para a Mente",
+                        "description": "Uma seleção refinada de peças clássicas para acalmar a mente, aliviar o estresse e promover o foco. Ideal para momentos de introspecção, estudo ou relaxamento profundo.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/1kGtBpJnR0bPWX4JXi5wUo?utm_source=generator&theme=0"
                     }
                 ]
             }

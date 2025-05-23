@@ -228,8 +228,13 @@
       flex-direction: column;
       text-align: center;
 
+      .footer-brand{
+        margin-bottom: 2rem;
+      }
+
       .footer-links {
         justify-content: center;
+        align-items: flex-start;
       }
     }
 
