@@ -411,23 +411,6 @@
         margin: 6rem 0;
         position: relative;
 
-        &::before {
-                content: '🏃';
-                position: absolute;
-                top: -30px;
-                left: 50%;
-                transform: translateX(-50%);
-                font-size: 2rem;
-                background: white;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
         h2 {
             font-size: 3rem;
             text-align: center;
@@ -548,8 +531,14 @@
                 margin-bottom: 1.5rem;
             }
             
-            .tips-list li::before {
-                color: vars.$exercise-red;
+            .tips-list li{
+                content: "💡";
+                font-size: 1.5rem;
+                margin-right: 1rem;
+
+                &::before {
+                    color: vars.$exercise-red;
+                }
             }
             
             .important-note {
@@ -566,68 +555,6 @@
             }
         }
     }
-
-.benefits-section {
-    background: linear-gradient(135deg, 
-        rgba(vars.$nutrition-dark-green, 0.05),
-        rgba(vars.$exercise-dark-blue, 0.05));
-    padding: 4rem;
-    border-radius: 15px;
-    margin: 4rem 0;
-    border-top: 2px solid rgba(vars.$exercise-red, 0.5);
-    border-bottom: 2px solid rgba(vars.$nutrition-dark-green, 0.5);
-
-    h2 {
-        color: color.mix(vars.$exercise-dark-blue, vars.$nutrition-dark-green, 50%);
-        text-align: center;
-        font-size: 2.8rem;
-        margin-bottom: 2rem;
-    }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-
-            .benefit-card {
-                text-align: center;
-                padding: 2rem;
-                background: white;
-                border-radius: 12px;
-                box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
-                transition: all 0.3s ease;
-                
-                &:nth-child(1) {
-                    border-top: 3px solid vars.$exercise-red;
-                }
-                
-                &:nth-child(2) {
-                    border-top: 3px solid vars.$nutrition-orange;
-                }
-                
-                &:nth-child(3) {
-                    border-top: 3px solid vars.$nutrition-dark-green;
-                }
-                
-                &:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-                }
-
-                h3 {
-                    color: color.mix(vars.$exercise-red, vars.$nutrition-dark-green, 50%);
-                    font-size: 3.5rem;
-                    margin-bottom: 1rem;
-                }
-                
-                p {
-                    color: #444;
-                    font-size: 1.4rem;
-                }
-            }
-        }
-    }
 }
 
 @media (max-width: 768px) {
@@ -640,8 +567,7 @@
             }
             
             .nutrition-grid,
-            .activities-grid,
-            .benefits-grid {
+            .activities-grid{
                 grid-template-columns: 1fr;
             }
         }

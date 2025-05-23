@@ -36,7 +36,12 @@ const Footer: React.FC = () => {
             <div className="footer-content container">
                 <div className="footer-brand">
                     <h3 className="footer-title">Saúde Mental</h3>
-                    <p className="footer-slogan">Informação que transforma</p>
+                    <p className="footer-slogan">
+                        Saber é o primeiro passo para cuidar.
+                    </p>
+                    <p className="footer-slogan">
+                        Encontre aqui orientação e apoio para uma vida emocional mais saudável.
+                    </p>
                 </div>
                 
                 <div className="footer-links">

@@ -287,25 +287,6 @@ const LifeStyle: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Mantenha sua seção de benefícios como está */}
-        <section className="benefits-section">
-          <h2>Benefícios Comprovados</h2>
-          <div className="benefits-grid">
-            <div className="benefit-card">
-              <h3>30%</h3>
-              <p>Redução nos sintomas de ansiedade com exercícios regulares</p>
-            </div>
-            <div className="benefit-card">
-              <h3>2x</h3>
-              <p>Mais probabilidade de manter a estabilidade emocional</p>
-            </div>
-            <div className="benefit-card">
-              <h3>40%</h3>
-              <p>Melhora na qualidade do sono com dieta balanceada</p>
-            </div>
-          </div>
-        </section>
       </main>
     </section>
   );
