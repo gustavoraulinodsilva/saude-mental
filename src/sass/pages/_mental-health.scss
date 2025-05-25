@@ -225,19 +225,39 @@
             .mental-health-detail{
 
                 .health-article{
-                    padding: 3rem;
+                    padding: 0;
     
                     h2{
                         font-size: 2.5rem;
                     }
     
                     p{
-                        font-size: 1.2rem;
+                        font-size: 1.4rem;
                     }
 
                     .article-grid{
                         display: flex;
                         flex-direction: column;
+
+                        .importance-box{
+
+                            .importance-list{
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        .statistics-box{
+
+                            .stats-grid{
+
+                                .stat-item{
+
+                                    .stat-desc{
+                                        font-size: 1.2rem;
+                                    }
+                                }
+                            }
+                        }
                     }
                 
                 }
