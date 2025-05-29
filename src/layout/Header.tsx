@@ -33,6 +33,7 @@ const Header: React.FC = () => {
             <ul className="nav-links">
                 <li><Link to="/saude-mental" onClick={closeMenu} className={`nav-link ${pathname === '/saude-mental' ? 'active' : ''}`}>Saúde Mental</Link></li>
                 <li><Link to="/estilo-de-vida" onClick={closeMenu} className={`nav-link ${pathname === '/estilo-de-vida' ? 'active' : ''}`}>Estilo de Vida</Link></li>
+                <li><Link to="/playlists" onClick={closeMenu} className={`nav-link ${pathname === '/playlist' ? 'active' : ''}`}>Playlists</Link></li>
                 <li><Link to="/avaliacao" onClick={closeMenu} className={`nav-link ${pathname === '/avaliacao' ? 'active' : ''}`}>Avaliação</Link></li>
             </ul>
         </nav>
