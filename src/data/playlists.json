@@ -1,15 +1,58 @@
 {
     "content": {
-        "pageTitle": "Playlists Terapêuticas",
-        "pageSubtitle": "Selecione playlists curadas para diferentes necessidades de saúde mental",
+        "pageTitle": "A Ciência da Música Terapêutica",
+        "pageSubtitle": "Descubra os fundamentos científicos da musicoterapia e explore playlists cuidadosamente selecionadas",
         "introduction": {
-            "title": "A Influência da Música na Saúde Mental",
-            "content": "A música tem um poder significativo sobre nosso bem-estar emocional e saúde mental. Estudos científicos comprovam que ouvir música pode reduzir níveis de cortisol (hormônio do estresse), diminuir a ansiedade, melhorar o humor e até mesmo aliviar sintomas de depressão. As diferentes frequências e ritmos musicais podem estimular áreas específicas do cérebro, promovendo relaxamento, foco ou energia, dependendo da necessidade do momento. Através de playlists cuidadosamente selecionadas, podemos criar ambientes sonoros que auxiliam no tratamento complementar de diversos transtornos mentais, potencializando outros métodos terapêuticos e contribuindo para uma melhor qualidade de vida."
+            "title": "A Ciência por Trás da Musicoterapia",
+            "subtitle": "Uma jornada milenar de cura através dos sons",
+            "mainContent": "A musicoterapia não é apenas uma tendência moderna – é uma prática milenar que vem sendo refinada pela ciência. Desde os antigos egípcios e gregos, que viam na música um elemento sagrado capaz de restaurar o equilíbrio emocional, até os estudos neurocientíficos atuais, a música provou ser uma poderosa ferramenta terapêutica.",
+            "historicalContext": {
+                "title": "📜 Uma História de Cura",
+                "content": "Filósofos como Pitágoras e Platão já exaltavam os efeitos da música sobre a alma. No século XX, especialmente após as guerras mundiais, a musicoterapia se profissionalizou quando músicos auxiliaram na recuperação de soldados traumatizados, levando à fundação de associações especializadas."
+            },
+            "scientificEvidence": {
+                "title": "🧠 O que a Neurociência Descobriu",
+                "benefits": [
+                    {
+                        "icon": "💆‍♀️",
+                        "title": "Redução do Estresse",
+                        "description": "Diminui significativamente os níveis de cortisol, promovendo relaxamento profundo"
+                    },
+                    {
+                        "icon": "🗣️",
+                        "title": "Comunicação Facilitada", 
+                        "description": "Especialmente eficaz em pacientes com autismo, esquizofrenia e dificuldades verbais"
+                    },
+                    {
+                        "icon": "🎯",
+                        "title": "Fortalecimento da Identidade",
+                        "description": "Reconecta pacientes com suas histórias e emoções, promovendo autoconhecimento"
+                    },
+                    {
+                        "icon": "💊",
+                        "title": "Terapia Não Invasiva",
+                        "description": "Método acessível, sem efeitos colaterais, que potencializa outros tratamentos"
+                    }
+                ]
+            },
+            "therapeuticApplications": {
+                "title": "🏥 Aplicações Terapêuticas Comprovadas",
+                "conditions": [
+                    "Transtorno Bipolar e Depressão",
+                    "Esquizofrenia e Transtornos Psicóticos", 
+                    "Transtorno do Espectro Autista",
+                    "Ansiedade e Síndrome do Pânico",
+                    "Cuidados Paliativos e Hospitalares",
+                    "Reabilitação Cognitiva e Motora"
+                ]
+            },
+            "callToAction": "🎵 Explore nossas playlists cuidadosamente selecionadas e descubra como a música pode transformar seu bem-estar emocional!"
         },
         "categories": [
             {
                 "title": "Lo-Fi para Concentração e Estudo",
-                "description": "Playlists para acalmar a mente e promover tranquilidade",
+                "description": "Frequências sonoras que otimizam a atividade cerebral para foco e aprendizado",
+                "therapeuticNote": "📚 Ideal para quem busca melhorar a concentração e reduzir a ansiedade de desempenho",
                 "playlists": [
                     {
                         "name": "Estudar 📔 Músicas | Lo-Fi para Concentração",
@@ -30,7 +73,8 @@
             },
             {
                 "title": "Playlists para Academia e Treinos",
-                "description": "Trilhas sonoras para momentos de tensão e nervosismo",
+                "description": "Ritmos energizantes que sincronizam com sua frequência cardíaca ideal",
+                "therapeuticNote": "💪 Músicas que estimulam a liberação de endorfinas, combatendo depressão e ansiedade",
                 "playlists": [
                     {
                         "name": "Academia 2025 Atualizada 💪 Treino 2025",
@@ -51,7 +95,8 @@
             },
             {
                 "title": "Relaxamento, Estresse e Ansiedade",
-                "description": "Música para melhorar a concentração e o desempenho",
+                "description": "Frequências terapêuticas que ativam o sistema nervoso parassimpático",
+                "therapeuticNote": "🧘‍♀️ Baseadas em estudos neurocientíficos para redução do cortisol e ativação de neurotransmissores do bem-estar",
                 "playlists": [
                     {
                         "name": "Música Relaxante para Acalmar a Mente, Relaxar e Diminuir a Ansiedade",
@@ -66,7 +111,7 @@
                     {
                         "name": "Para Acalmar a Ansiedade",
                         "description": "Com mais de mil faixas, essa seleção é perfeita para momentos em que você precisa desacelerar e encontrar calma.",
-                        "spotifyEmbed": "//open.spotify.com/embed/playlist/6nVlroxRmcs6h03Jl18nfR?utm_source=generator&theme=0"
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/6nVlroxRmcs6h03Jl18nfR?utm_source=generator&theme=0"
                     },
                     {
                         "name": "Sinfonia Serena: Clássicos para a Mente",

@@ -6,7 +6,7 @@
 
     .evaluation-hero {
         background: linear-gradient(135deg, vars.$mental-light-purple, vars.$mental-purple);
-        padding: 12rem 0 4rem; // Aumentei o padding top para compensar o header
+        padding: 12rem 0 4rem;
         text-align: center;
         color: white;
 
@@ -82,11 +82,11 @@
                     font-weight: 600;
 
                     &.agree-button {
-                        background: vars.$mental-purple; // Corrigido para usar a variável
+                        background: vars.$mental-purple;
                         color: white;
 
                         &:hover {
-                            background: vars.$mental-dark-purple; // Corrigido para usar a variável
+                            background: vars.$mental-dark-purple;
                             transform: translateY(-2px);
                             box-shadow: 0 5px 15px rgba(106, 103, 206, 0.3);
                         }
@@ -151,7 +151,7 @@
             border-radius: 1.5rem;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            min-height: 85vh; // Altura mínima para o formulário
+            min-height: 85vh;
             position: relative;
 
             .tally-iframe {

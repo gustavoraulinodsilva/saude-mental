@@ -72,7 +72,205 @@
             }
         }
 
-        // Nova seção de introdução
+        // Seção de loading
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 50vh;
+            
+            .loading-spinner {
+                font-size: 4rem;
+                animation: spin 2s linear infinite;
+            }
+            
+            p {
+                font-size: 1.6rem;
+                color: vars.$neutral-dark;
+                margin-top: 2rem;
+            }
+        }
+
+        // Nova seção de introdução expandida
+        .introduction-expanded {
+            background: white;
+            padding: 4rem;
+            margin: -2rem auto 4rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            max-width: 90%;
+            position: relative;
+            z-index: 1;
+
+            .intro-header {
+                text-align: center;
+                margin-bottom: 3rem;
+
+                h2 {
+                    font-size: 3rem;
+                    color: vars.$music-purple;
+                    margin-bottom: 1rem;
+                }
+
+                h3 {
+                    font-size: 1.8rem;
+                    color: vars.$music-blue;
+                    margin-bottom: 2rem;
+                    font-style: italic;
+                }
+
+                .main-content {
+                    font-size: 1.6rem;
+                    line-height: 1.8;
+                    color: vars.$neutral-dark;
+                    text-align: justify;
+                }
+            }
+
+            .interactive-section {
+                margin: 2rem 0;
+                border: 1px solid #eee;
+                border-radius: 0.8rem;
+                overflow: hidden;
+
+                .section-toggle {
+                    width: 100%;
+                    padding: 1.5rem 2rem;
+                    background: vars.$neutral-light;
+                    border: none;
+                    text-align: left;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    color: vars.$music-purple;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: #f0f0f0;
+                    }
+
+                    &.active {
+                        background: vars.$music-purple;
+                        color: white;
+                    }
+
+                    .toggle-icon {
+                        font-size: 1.2rem;
+                        transition: transform 0.3s ease;
+                    }
+                }
+
+                .section-content {
+                    padding: 2rem;
+                    background: white;
+                    animation: slideDown 0.3s ease;
+
+                    p{
+                        font-size: 1.6rem;
+                        color: vars.$neutral-dark;
+                        margin-bottom: 2rem;
+                        line-height: 1.6;
+                    }
+
+                    .benefits-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                        gap: 2rem;
+
+                        .benefit-card {
+                            background: vars.$neutral-light;
+                            padding: 2rem;
+                            border-radius: 1rem;
+                            text-align: center;
+                            transition: transform 0.3s ease;
+
+                            &:hover {
+                                transform: translateY(-5px);
+                                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+                            }
+
+                            .benefit-icon {
+                                font-size: 3rem;
+                                margin-bottom: 1rem;
+                            }
+
+                            h4 {
+                                font-size: 1.6rem;
+                                color: vars.$music-purple;
+                                margin-bottom: 1rem;
+                            }
+
+                            p {
+                                font-size: 1.4rem;
+                                color: vars.$neutral-dark;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+
+                    .conditions-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 1rem;
+
+                        .condition-tag {
+                            background: linear-gradient(45deg, vars.$music-purple, vars.$music-blue);
+                            color: white;
+                            padding: 1rem 1.5rem;
+                            border-radius: 2rem;
+                            font-size: 1.4rem;
+                            text-align: center;
+                            font-weight: 600;
+                            transition: transform 0.3s ease;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
+
+                            span {
+                                margin-right: 0.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .call-to-action {
+                background: linear-gradient(45deg, vars.$music-purple, vars.$music-turquoise);
+                color: white;
+                padding: 2rem;
+                border-radius: 1rem;
+                text-align: center;
+                margin-top: 3rem;
+                position: relative;
+                overflow: hidden;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+                    animation: shimmer 3s infinite;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    margin: 0;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+
+        // Seção de introdução antiga (mantida para compatibilidade)
         .introduction {
             background: white;
             padding: 4rem;
@@ -173,6 +371,32 @@
                 line-height: 1.6;
             }
 
+            // Estilos para notas terapêuticas
+            .category-header {
+                .therapeutic-note {
+                    background: rgba(157, 78, 221, 0.1);
+                    border-left: 4px solid vars.$music-purple;
+                    padding: 1.5rem;
+                    margin: 2rem 0;
+                    border-radius: 0.5rem;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1rem;
+
+                    .note-icon {
+                        font-size: 1.8rem;
+                        min-width: 2rem;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                        color: vars.$neutral-dark;
+                        margin: 0;
+                        line-height: 1.6;
+                    }
+                }
+            }
+
             .playlists-grid {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -214,6 +438,28 @@
     }
 }
 
+// Animações
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
 // Responsividade
 @media (max-width: 768px) {
     .playlists-container {
@@ -235,9 +481,40 @@
                 }
             }
             
-            .introduction {
+            .introduction,
+            .introduction-expanded {
                 padding: 3rem 2rem;
                 max-width: 95%;
+                
+                .intro-header {
+                    h2 {
+                        font-size: 2.4rem;
+                    }
+
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+                }
+
+                .interactive-section {
+                    .section-toggle {
+                        font-size: 1.6rem;
+                        padding: 1.2rem 1.5rem;
+                    }
+
+                    .section-content {
+                        padding: 1.5rem;
+
+                        .benefits-grid {
+                            grid-template-columns: 1fr;
+                            gap: 1.5rem;
+                        }
+
+                        .conditions-grid {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
                 
                 h2 {
                     font-size: 2.2rem;
@@ -258,6 +535,16 @@
                 .category-description {
                     font-size: 1.5rem;
                 }
+
+                .category-header {
+                    .therapeutic-note {
+                        padding: 1.2rem;
+                        
+                        p {
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
             }
         }
     }
@@ -273,9 +560,27 @@
                 }
             }
             
-            .introduction {
+            .introduction,
+            .introduction-expanded {
                 padding: 2.5rem 1.5rem;
                 
+                .intro-header {
+                    h2 {
+                        font-size: 2rem;
+                    }
+
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .interactive-section {
+                    .section-toggle {
+                        font-size: 1.4rem;
+                        padding: 1rem;
+                    }
+                }
+
                 h2 {
                     font-size: 2rem;
                 }
@@ -284,6 +589,17 @@
             .playlist-category {
                 .playlists-grid {
                     grid-template-columns: 1fr;
+                }
+
+                .category-header {
+                    .therapeutic-note {
+                        flex-direction: column;
+                        text-align: center;
+                        
+                        .note-icon {
+                            align-self: center;
+                        }
+                    }
                 }
             }
         }
