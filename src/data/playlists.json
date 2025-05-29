@@ -119,6 +119,18 @@
                         "spotifyEmbed": "https://open.spotify.com/embed/playlist/1kGtBpJnR0bPWX4JXi5wUo?utm_source=generator&theme=0"
                     }
                 ]
+            },
+            {
+                "title": "Seleção Exclusiva do Projeto",
+                "description": "Playlist especialmente criada pela nossa equipe, combinando conhecimento científico e curadoria especializada",
+                "therapeuticNote": "🌟 Uma seleção única que combina diferentes estilos musicais baseados nos princípios da musicoterapia estudados",
+                "playlists": [
+                    {
+                        "name": "Playlist Saúde Mental - Curadoria Especializada",
+                        "description": "Uma playlist criada especialmente pela nossa equipe, reunindo músicas cuidadosamente selecionadas com base nos estudos sobre musicoterapia e saúde mental apresentados neste projeto.",
+                        "spotifyEmbed": "https://open.spotify.com/embed/playlist/5MpFWMmA0VvXkrxi7QN6mK?utm_source=generator&theme=0"
+                    }
+                ]
             }
         ]
     }
